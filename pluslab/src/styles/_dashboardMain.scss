@@ -1,0 +1,24 @@
+.dashboardMain {
+  height: 768px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 9vw 0 9vw;
+
+  .mainBox {
+    width: 82vw;
+    padding-top: 192px;
+    display: flex;
+    justify-content: space-between;
+    .collectionStock {
+      padding: 12px;
+      width: 221px;
+      height: 588px;
+      background-color: $primaryLighter;
+    }
+    .mainStock {
+      width: 1280px;
+      height: 612px;
+      background-color: $primary;
+    }
+  }
+}
