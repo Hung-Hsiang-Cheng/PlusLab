@@ -18,7 +18,7 @@ const Nav = () => {
       <input type="text" placeholder="查股市、查課程" />
       <Link to="/">最新資訊</Link>
       <Link to="/dashboard">交易模擬器</Link>
-      <Link to="/">課程列表</Link>
+      <Link to="/Coursepage">課程列表</Link>
       <Link to="/">我的課程</Link>
       <Link to="/">
         <svg
@@ -31,7 +31,7 @@ const Nav = () => {
           <path d="M17.1429 0H2.85714C1.28571 0 0.014286 1.3 0.014286 2.88889L0 26L10 21.6667L20 26V2.88889C20 1.3 18.7143 0 17.1429 0ZM17.1429 21.6667L10 18.5178L2.85714 21.6667V2.88889H17.1429V21.6667Z" />
         </svg>
       </Link>
-      <Link to="/">
+      <Link to="/Cartpage">
         <svg
           className="shoppingCart"
           width="24"

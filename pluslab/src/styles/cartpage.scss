@@ -1,0 +1,439 @@
+$pramaryDarker: #000000;
+$primary: #1d1f27;
+$primaryLighter: #44464f;
+$primaryLightest: #6f717b;
+$primaryLightestest: #9d9faa;
+
+$blueDarker: #003dcb;
+$blue: #4967ff;
+$blueLighter: #8895ff;
+
+$greenDarker: #00b114;
+$green: #38e54d;
+
+$redDarker: #aa003b;
+$red: #e23965;
+
+$yellow: #e0e03b;
+
+$white: #ffffff;
+
+@font-face {
+  font-family: "interRegular";
+  src: url(./font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "interBold";
+  src: url(./font/Inter-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "intreRegular", "Noto Sans TC", sans-serif;
+  user-select: none;
+}
+
+body {
+  background-color: $primary;
+}
+
+.dTop {
+  svg {
+    border-radius: 50%;
+    position: fixed;
+    z-index: 200;
+    bottom: 10px;
+    right: 10px;
+    path {
+      transition: all 0.3s;
+      fill: $white;
+      opacity: 0.3;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.header {
+  height: 50px;
+}
+.orderdetail {
+  display: flexbox;
+  position: relative;
+  float: right;
+  right: 30px;
+  width: 280px;
+  height: 350px;
+}
+.dCartContainer{
+  width: 68%;
+  height: 400px;
+
+  padding-left: 100px;
+
+  .dCartTitle {
+    font: {
+      weight: 700;
+      size: 30px;
+    }
+    padding: 5px 0;
+    border-bottom: 6px solid $red;
+    line-height: 48px;
+    letter-spacing: 0.15em;
+
+    color: $blue;
+    span {
+      svg {
+        path {
+          fill: $redDarker;
+        }
+      }
+    }
+  }
+}
+.dCartList {
+  li {
+    margin: 5px 0;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    border-bottom: 1px solid $primaryLightest;
+
+    div {
+      .dCartTiltle {
+        padding: 20px 15px 0 15px;
+        font: {
+          weight: 700;
+          size: 20px;
+        }
+        line-height: 33px;
+        letter-spacing: 0.1em;
+        color: $blue;
+      }
+      .dCartTeacher {
+        font: {
+          weight: 400;
+          size: 18px;
+        }
+        line-height: 33px;
+        letter-spacing: 0.1em;
+        color: $white;
+        padding-left: 15px;
+      }
+    }
+    .dOldPrice {
+      width: 150px;
+      text-align: center;
+      padding: 40px 5px;
+      font: {
+        weight: 600;
+        size: 20px;
+      }
+      line-height: 33px;
+      letter-spacing: 0.1em;
+      color: $primaryLightestest;
+      text-decoration: line-through;
+    }
+    .dSpecailPrice {
+      width: 150px;
+      text-align: center;
+      padding: 40px 5px;
+      font: {
+        weight: 600;
+        size: 20px;
+      }
+      line-height: 33px;
+      letter-spacing: 0.1em;
+      color: $red;
+    }
+  }
+}
+.orderdetail {
+  background-color: $primary;
+  font: {
+    weight: 500;
+  }
+  .dOrderTitle {
+    font: {
+      size: 20px;
+    }
+    padding: 30px 0 5px 30px;
+    line-height: 48px;
+    letter-spacing: 0.15em;
+    color: $white;
+  }
+  .sSubtotaltitle {
+    font: {
+      size: 20px;
+    }
+    line-height: 48px;
+    letter-spacing: 0.15em;
+    color: $white;
+    padding: 9px 0 9px 30px;
+  }
+  .sSubtotal {
+    font-size: 23px;
+    line-height: 33px;
+    float: right;
+    padding: 9px 30px 9px 0px;
+    letter-spacing: 0.1em;
+    color: $primaryLightestest;
+    ::before {
+      display: flex;
+    }
+  }
+  .sDiscount {
+    font-size: 20px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    color: $primaryLightestest;
+    padding: 10px;
+    input {
+      margin: 5px;
+      background-color: $primary;
+      border-radius: 10px;
+    }
+  }
+  .sNoSpecial {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 33px;
+    letter-spacing: 0.1em;
+    color: $red;
+  }
+  .icodeitems {
+    text-align: center;
+
+    .iDiscountCode {
+      background-color: $primary;
+      border: 2px solid $primaryLightestest;
+      width: 160px;
+      height: 40px;
+      color: $white;
+      font-size: 20px;
+      padding: 5px;
+    }
+    .iCodeSubmit {
+      width: 91px;
+      background-color: $primaryLightestest;
+      border: 2px solid $primaryLightestest;
+      color: $white;
+      transition: all 0.3s ease;
+      height: 40px;
+
+      &:hover {
+        background-color: $primaryLighter;
+        color: $blueDarker;
+      }
+    }
+  }
+  .dTotalPrice {
+    font-size: 30px;
+    line-height: 33px;
+    text-align: right;
+    letter-spacing: 0.1em;
+    padding: 9px 20px 9px 0px;
+    color: $red;
+  }
+  .iorder {
+    background-color: $blue;
+    padding: 10px 80px;
+    border-radius: 24px;
+    border: 1px solid $blue;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.15em;
+    color: $white;
+    margin: 5px 35px;
+    &:hover {
+      background-color: $blueLighter;
+    }
+  }
+}
+
+.dCartNone {
+  display: flex;
+  padding: 50px 0 0 0;
+  justify-content: center;
+  img {
+    width: 300px;
+  }
+}
+.btnCartNone {
+  text-align: center;
+  button {
+    background-color: $blue;
+    border-radius: 24px;
+    padding: 10px 20px;
+    font: {
+      weight: 600;
+      size: 18px;
+    }
+    line-height: 22px;
+    letter-spacing: 0.15em;
+    color: $white;
+    svg {
+      color: $white;
+    }
+    &:hover {
+      background-color: $blueLighter;
+    }
+  }
+}
+.dCollectClass {
+  width: 68%;
+  height: 500px;
+  padding-left: 100px;
+  div {
+    .dCartTitle {
+      font: {
+        weight: 700;
+        size: 30px;
+      }
+      svg {
+        fill: $red;
+      }
+      padding: 5px 0;
+
+      border-bottom: 6px solid $red;
+      line-height: 48px;
+      letter-spacing: 0.15em;
+
+      color: $blue;
+    }
+  }
+
+  .dCollectlist {
+    margin: 20px;
+    justify-content: center;
+    display: flex;
+    .dCard {
+      text-decoration: none;
+      list-style-type: none;
+      padding: 5px;
+      width: 260px;
+      display: flexbox;
+      height: 20px;
+      flex-direction: column;
+      transition: all 0.1s ease-in-out;
+      color: $primaryLightestest;
+      &:hover {
+        width: 270px;
+        height: 370px;
+        padding: 0 5px;
+      }
+      .dCardStar {
+        color: $redDarker;
+        padding: 0 5px;
+      }
+      .dCardStarActive {
+        path {
+          fill: $yellow;
+        }
+      }
+      .dCardTitle {
+        color: $blue;
+        font: {
+          weight: 700;
+          size: 22px;
+        }
+        line-height: 33px;
+        letter-spacing: 0.1em;
+      }
+      .imgCard {
+        width: 100%;
+      }
+      .shopCart {
+        position: relative;
+        top: -50px;
+        padding: 5px;
+        float: right;
+        font-size: 25px;
+        z-index: 300;
+        color: $red;
+      }
+      .dCardMark {
+        position: relative;
+        top: -50px;
+        font-size: 25px;
+        padding: 5px;
+        color: $red;
+        z-index: 300;
+      }
+      .dCardTeacher {
+        color: $primary;
+        font: {
+          weight: 400;
+          size: 16px;
+        }
+        line-height: 33px;
+        /* identical to box height, or 206% */
+        letter-spacing: 0.05em;
+      }
+      .dCardtext {
+        padding: 10px;
+        background-color: $white;
+        position: relative;
+        align-items: center;
+        top: -50px;
+        height: 200px;
+      }
+      .dCardPrice {
+        font: {
+          weight: 600;
+          size: 22px;
+        }
+        justify-content: center;
+        line-height: 33px;
+        letter-spacing: 0.1em;
+        color: $red;
+        float: right;
+        position: relative;
+        top: -30px;
+      }
+      svg {
+        path {
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}
+.btnToYouPre {
+  float: left;
+  left: 0px;
+  top: 0px;
+  background-color: transparent;
+  color: transparent;
+  transition: all 0.3s;
+  border: none;
+  z-index: 100;
+  &:hover {
+    color: $white;
+  }
+  &::before {
+    display: flex;
+    position: relative;
+  }
+}
+.btnToYouNext {
+  float: right;
+  right: 0px;
+  top: 190px;
+  position: relative;
+  transition: all 0.3s;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  z-index: 100;
+  &:hover {
+    color: $white;
+  }
+  &::before {
+    display: flex;
+    position: relative;
+  }
+}
