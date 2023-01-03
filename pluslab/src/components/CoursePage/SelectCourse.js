@@ -38,75 +38,7 @@ const SelectCourse = () => {
               </svg>
             </div>
             <div className="dCardtext">
-              <div className="dCardScore">
-                <span className="dCardStar">4</span>
-                <span>
-                  <svg
-                    className="dCardStarActive"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.99996 0L10.9832 6.10368H17.401L12.2089 9.87597L14.1921 15.9796L8.99996 12.2074L3.80786 15.9796L5.79106 9.87597L0.59896 6.10368H7.01675L8.99996 0Z"
-                      fill="#9d9faa"
-                    />
-                  </svg>
-                  <svg
-                    className="dCardStarActive"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.99996 0L10.9832 6.10368H17.401L12.2089 9.87597L14.1921 15.9796L8.99996 12.2074L3.80786 15.9796L5.79106 9.87597L0.59896 6.10368H7.01675L8.99996 0Z"
-                      fill="#9d9faa"
-                    />
-                  </svg>
-                  <svg
-                    className="dCardStarActive"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.99996 0L10.9832 6.10368H17.401L12.2089 9.87597L14.1921 15.9796L8.99996 12.2074L3.80786 15.9796L5.79106 9.87597L0.59896 6.10368H7.01675L8.99996 0Z"
-                      fill="#9d9faa"
-                    />
-                  </svg>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.99996 0L10.9832 6.10368H17.401L12.2089 9.87597L14.1921 15.9796L8.99996 12.2074L3.80786 15.9796L5.79106 9.87597L0.59896 6.10368H7.01675L8.99996 0Z"
-                      fill="#9d9faa"
-                    />
-                  </svg>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.99996 0L10.9832 6.10368H17.401L12.2089 9.87597L14.1921 15.9796L8.99996 12.2074L3.80786 15.9796L5.79106 9.87597L0.59896 6.10368H7.01675L8.99996 0Z"
-                      fill="#9d9faa"
-                    />
-                  </svg>
-                </span>
-                <span>(41)</span>
-              </div>
+              
               <div className="dCardTitle">20堂課教你存好股，打造投資現金流</div>
               <div className="dCardTeacher">某某某</div>
               <div className="dCardPersonCount">

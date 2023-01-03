@@ -14,7 +14,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  outline: red solid 0.1px;
+  text-decoration: none;
 }
 
 body {
@@ -86,7 +86,7 @@ body {
   background-color: #1d1f27;
   color: #4967ff;
   text-align: center;
-  padding-top: 90px;
+  padding-top: 100px;
 }
 .divText span {
   padding-bottom: 3px;
@@ -95,77 +95,147 @@ body {
   font-size: 40px;
 }
 
-.dHotCarousel {
-  overflow: hidden;
-  height: 650px;
-}
-.dHotCarousel .dHotContainer {
-  height: 550px;
-  padding: 90px 0px;
-  display: flex;
-  width: 3000px;
-}
-.dHotCarousel .dHotContainer .slider {
-  height: 450px;
-  margin: 0 8px;
-  width: 75%;
-  background-color: #38e54d;
-}
-.dHotCarousel .dHotBottom {
+.slider {
   position: relative;
-  text-align: center;
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
 }
-.dHotCarousel .dHotBottom .btn {
-  width: 50px;
-  cursor: pointer;
-  margin: 0 5px;
-  border-radius: 2%;
-  background-color: #000000;
+.slider:active, .slider:hover, .slider:focus {
+  outline: none;
   border: none;
 }
-.dHotCarousel .dHotBottom .hActive {
-  background-color: #4967ff;
+.slider .card {
+  width: 100%;
+  height: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.slider .card .cardImg {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+  background-color: #000000;
+  transition: 0.5s;
+}
+.slider .card .cardImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slider .card:hover img {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.slider .card:hover .cardImg {
+  transform: translateY(-100px);
+  transition: all 0.9s;
+}
+.slider .card ul {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+}
+.slider .card ul li {
+  list-style: none;
+}
+.slider .card ul li a {
+  position: relative;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 23px;
+  color: #000000;
+  font-weight: bold;
+  margin: 0 6px;
+  transition: 0.4s;
+  transform: translateY(200px);
+  opacity: 0;
+}
+.slider .card ul li a span {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+}
+.slider .card .titletxt {
+  position: absolute;
+  bottom: 400px;
+  left: 0;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+  height: 40px;
+  z-index: 2;
+  padding: 10px;
+  transition: 0.6s;
+  text-align: center;
+  font-size: 30px;
+}
+.slider .card:hover ul li a span {
+  transform: translateY(0px);
+  color: #000000;
+}
+.slider .card:hover .titletxt {
+  bottom: 0;
+  height: 100px;
+}
+.slider ul li Link button {
+  font-size: 50px;
+  width: 100px;
+  height: 30px;
+  transition: 0.8s;
+}
+.slider ul li Link button:hover {
+  transform: rotate(360deg);
+  background-color: #ffffff;
 }
 
-.dindicator {
-  position: relative;
-  display: flexbox;
-  top: -650px;
-  padding: 230px 0;
+.dHotCarousel .slick-dots {
+  bottom: -80px;
 }
-.dindicator .btnPre {
-  float: left;
-  left: 20px;
-  position: relative;
-  border-radius: 50%;
-  background-color: transparent;
-  color: transparent;
-  transition: all 0.3s;
-  border: none;
+.dHotCarousel .slick-dots li {
+  margin: 30px;
+}
+.dHotCarousel .slick-dots li button::before {
+  content: "  ";
+  background-color: #44464f;
+  width: 70px;
+  height: 15px;
+  border-radius: 2px;
+}
+.dHotCarousel .slick-dots .slick-active button::before {
+  background-color: #4967ff;
+}
+.dHotCarousel .slick-prev,
+.dHotCarousel .slick-next {
   z-index: 100;
 }
-.dindicator .btnPre svg path {
-  opacity: 0.3;
+.dHotCarousel .slick-prev:before {
+  content: url(../components/CoursePage/img/ftoleft.svg);
+  left: 50px;
+  position: absolute;
+  opacity: 0.35;
+  top: -10px;
+  transition: all 0.8s;
 }
-.dindicator .btnPre svg path:hover {
-  opacity: 0.7;
-}
-.dindicator .btnNext {
-  float: right;
-  right: 10px;
-  position: relative;
-  border-radius: 50%;
-  transition: all 0.3s;
-  border: none;
-  background-color: transparent;
-  color: transparent;
-  z-index: 100;
-}
-.dindicator .btnNext svg path {
-  opacity: 0.3;
-}
-.dindicator .btnNext svg path:hover {
-  opacity: 0.7;
+.dHotCarousel .slick-next:before {
+  content: url(../components/CoursePage/img/ftoright.svg);
+  right: 50px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+  top: -10px;
 }
 
 .divToYouText {
@@ -175,6 +245,45 @@ body {
 .divToYou {
   background-color: #1d1f27;
   height: 500px;
+}
+.divToYou .slick-dots {
+  bottom: -80px;
+}
+.divToYou .slick-dots li {
+  margin: 30px;
+}
+.divToYou .slick-dots li button::before {
+  content: "  ";
+  background-color: #44464f;
+  width: 70px;
+  height: 15px;
+  border-radius: 2px;
+}
+.divToYou .slick-dots .slick-active button::before {
+  background-color: #003dcb;
+}
+.divToYou .slick-prev,
+.divToYou .slick-next {
+  z-index: 100;
+}
+.divToYou .slick-next {
+  right: -30px;
+}
+.divToYou .slick-prev:before {
+  content: url(../components/CoursePage/img/toleft.svg);
+  left: 100px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+}
+.divToYou .slick-next:before {
+  content: url(../components/CoursePage/img/toright.svg);
+  right: 100px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
 }
 .divToYou .dBecause {
   padding: 20px;
@@ -200,10 +309,11 @@ body {
   color: #aa003b;
 }
 .divToYou .divItems .dClasstext .score {
-  padding: 3px 5px;
+  padding: 3px px;
 }
 .divToYou .divItems .dClasstext .score span {
   padding: 0 3px;
+  vertical-align: middle;
 }
 .divToYou .divItems .dClasstext .score .sPersonCount,
 .divToYou .divItems .dClasstext .score .sClock {
@@ -224,7 +334,7 @@ body {
   padding: 10px;
 }
 .divToYou .divItems .dClasstext .dClassPrice {
-  line-height: 33px;
+  line-height: 50px;
   letter-spacing: 0.1em;
   color: #e23965;
   text-align: center;
@@ -234,71 +344,18 @@ body {
 .divToYou .divItems .dClasstext .dClassPrice button {
   transition: all 0.2s ease-out;
   padding: 5px 15px;
+  display: flexbox;
+  width: 100px;
+  height: 40px;
   background-color: #e23965;
   color: #ffffff;
+  font-size: medium;
   border: 2px solid #e23965;
   border-radius: 24px;
 }
 .divToYou .divItems .dClasstext .dClassPrice button:hover {
-  background-color: #ffffff;
-  color: #e23965;
+  background-color: #aa003b;
   border: 1px solid #e23965;
-}
-
-.btnToYouPre {
-  float: left;
-  left: 80px;
-  top: -190px;
-  position: relative;
-  background-color: transparent;
-  color: #ffffff;
-  opacity: 0.7;
-  transition: all 0.3s;
-  border: none;
-  z-index: 100;
-}
-.btnToYouPre svg path:hover {
-  fill: #ffffff;
-}
-.btnToYouPre svg::before {
-  display: flexbox;
-  top: -500px;
-}
-
-.btnToYouNext {
-  float: right;
-  right: 80px;
-  top: -190px;
-  position: relative;
-  transition: all 0.3s;
-  border: none;
-  background-color: transparent;
-  color: #ffffff;
-  opacity: 0.7;
-  z-index: 100;
-}
-.btnToYouNext svg path:hover {
-  fill: #ffffff;
-}
-.btnToYouNext svg::before {
-  display: flexbox;
-  top: -500px;
-}
-
-.dToYouBottom {
-  position: relative;
-  text-align: center;
-}
-.dToYouBottom .btn {
-  width: 50px;
-  cursor: pointer;
-  margin: 0 5px;
-  border-radius: 2%;
-  background-color: #000000;
-  border: none;
-}
-.dToYouBottom .hActive {
-  background-color: #4967ff;
 }
 
 .divNEW {
@@ -413,4 +470,7 @@ body {
   letter-spacing: 0.15em;
   color: #ffffff;
   border-radius: 24px;
+}
+.dCardMore button:hover {
+  background-color: #003dcb;
 }/*# sourceMappingURL=coursepage.css.map */
