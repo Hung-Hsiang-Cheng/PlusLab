@@ -375,7 +375,7 @@ body {
   background: #1d1f27;
 }
 .divNEW .ulNewContainer {
-  width: 100%;
+  width: 90%;
   height: 1200;
   margin: 0 auto;
   list-style-type: none;
@@ -405,15 +405,18 @@ body {
 }
 .divNEW .ulNewContainer .slick-prev:before {
   content: url(../components/CoursePage/img/toleft.svg);
-  left: 90px;
+  left: -30px;
   top: -10px;
   position: absolute;
   opacity: 0.35;
   transition: all 0.8s;
 }
+.divNEW .ulNewContainer .slick-prev:before:hover {
+  opacity: 1;
+}
 .divNEW .ulNewContainer .slick-next:before {
   content: url(../components/CoursePage/img/toright.svg);
-  right: 50px;
+  right: -60px;
   top: -10px;
   position: absolute;
   opacity: 0.35;
@@ -426,8 +429,11 @@ body {
   background: #1d1f27;
 }
 .divAllCourse .ulAllCourseContainer {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
   width: 90%;
   height: 1200;
   margin: 0 auto;
@@ -441,14 +447,18 @@ body {
   width: 280px;
   display: flex;
   position: relative;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   flex-direction: column;
   transition: all 0.1s ease-in-out;
   color: #9d9faa;
+  border: 2px solid transparent;
 }
 .dCard:hover {
+  filter: saturate(6);
   border: 2px solid #9d9faa;
-  box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 0px 0px 1px #a0a0a0, inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
 }
 .dCard .dCardScore {
   justify-content: baseline;
@@ -507,6 +517,7 @@ body {
   padding: 10px;
   background-color: #ffffff;
   position: relative;
+  height: 100%;
   border-bottom: 8px solid #e23965;
   align-items: center;
   height: 200px;

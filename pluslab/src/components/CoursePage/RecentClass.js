@@ -102,8 +102,10 @@ const RecentClass = () => {
     infinite: true,
     dot: false,
     speed: 500,
+    centerPadding: "70px",
     slidesToShow: 4,
-    slidesToScroll: 10,
+    slidesToScroll: 1,
+  
   };
 
   return (
@@ -235,3 +237,5 @@ const RecentClass = () => {
 };
 
 export default RecentClass;
+
+
