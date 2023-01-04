@@ -66,6 +66,11 @@ const ForYouCourse = () => {
       },
     ],
   };
+
+   
+
+ 
+
   const settings = {
     className: "center",
     centerMode: true,

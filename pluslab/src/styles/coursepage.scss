@@ -247,11 +247,11 @@ body {
     bottom: -80px;
 
     li {
-      margin: 30px;
+      margin: 25px;
       button::before {
         content: "  ";
-        background-color:  $primaryLighter;
-        width: 70px;
+        background-color: $pramaryDarker;
+        width: 60px;
         height: 15px;
         border-radius: 2px;
       }
@@ -266,18 +266,27 @@ body {
   .slick-next {
     z-index: 100;
   }
+  .slick-arrow {
+    right: 0px;
+    &:hover {
+      opacity: 0.85;
+    }
+  }
 
   .slick-prev:before {
     content: url(../components/CoursePage/img/ftoleft.svg);
-    left: 50px;
+    left: 80px;
     position: absolute;
     opacity: 0.35;
     top: -10px;
     transition: all 0.8s;
+    &:hover {
+      opacity: 0.85;
+    }
   }
   .slick-next:before {
     content: url(../components/CoursePage/img/ftoright.svg);
-    right: 50px;
+    right: 60px;
     position: absolute;
     opacity: 0.35;
     transition: all 0.8s;
@@ -295,18 +304,18 @@ body {
     bottom: -80px;
 
     li {
-      margin: 30px;
+      margin: 25px;
       button::before {
         content: "  ";
-        background-color: $primaryLighter;
-        width: 70px;
+        background-color: $pramaryDarker;
+        width: 60px;
         height: 15px;
         border-radius: 2px;
       }
     }
     .slick-active {
       button::before {
-        background-color: $blueDarker;
+        background-color: $blue;
       }
     }
   }
@@ -314,13 +323,13 @@ body {
   .slick-next {
     z-index: 100;
   }
-   .slick-next {
-    right: -30px;
+  .slick-arrow {
+    right: 0px;
   }
 
   .slick-prev:before {
     content: url(../components/CoursePage/img/toleft.svg);
-    left: 100px;
+    left: 90px;
     top: -10px;
     position: absolute;
     opacity: 0.35;
@@ -328,17 +337,17 @@ body {
   }
   .slick-next:before {
     content: url(../components/CoursePage/img/toright.svg);
-    right: 100px;
+    right: 50px;
     top: -10px;
     position: absolute;
     opacity: 0.35;
     transition: all 0.8s;
   }
- 
+
   .dBecause {
     padding: 20px;
     color: $white;
-    font-size: medium;
+    font-size: 25px;
     text-align: center;
   }
   .divItems {
@@ -346,102 +355,166 @@ body {
     width: 80%;
     margin: 0 auto;
     display: flex;
-
+    border-bottom: 10px solid $red;
     .imgClass {
       float: left;
+      img {
+        height: 100%;
+      }
     }
-    .dClasstext {
-      float: right;
-      padding: 30px;
-      color: $primaryLightestest;
-      .sStar {
-        color: $redDarker;
+  }
+  .dClasstext {
+    float: right;
+    padding: 30px;
+    color: $primaryLightestest;
+    .sStar {
+      color: $redDarker;
+    }
+    .score {
+      padding: 3px px;
+      span {
+        padding: 0 3px;
+        vertical-align: middle;
       }
-      .score {
-        padding: 3px px;
-        span {
-          padding: 0 3px;
-          vertical-align: middle;
-        }
-        .sPersonCount,
-        .sClock {
-          float: right;
-        }
-        .sOnStar {
-          path {
-            fill: $yellow;
-          }
-        }
+      .sPersonCount,
+      .sClock {
+        float: right;
       }
-      h5 {
-        padding: 10px;
-        line-height: 48px;
-        letter-spacing: 0.1em;
-        color: $blue;
-        font: {
-          weight: 700;
-          size: 32px;
+      .sOnStar {
+        path {
+          fill: $yellow;
         }
       }
-      p {
-        padding: 10px;
+    }
+    h5 {
+      padding: 10px;
+      line-height: 48px;
+      letter-spacing: 0.1em;
+      color: $blue;
+      font: {
+        weight: 700;
+        size: 32px;
       }
-      .dClassPrice {
-        line-height: 50px;
-        letter-spacing: 0.1em;
-        color: $red;
-        text-align: center;
+    }
+    p {
+      padding: 10px;
+    }
+    .dClassPrice {
+      line-height: 50px;
+      letter-spacing: 0.1em;
+      color: $red;
+      text-align: center;
 
-        font: {
-          weight: 600;
-          size: 22px;
-        }
-        button {
-          transition: all 0.2s ease-out;
-          padding: 5px 15px;
-          display: flexbox;
-          width: 100px;
-          height: 40px;
-          background-color: $red;
-          color: $white;
-          font-size: medium;
-          border: 2px solid $red;
-          border-radius: 24px;
-          &:hover {
-            background-color: $redDarker;
-            border: 1px solid $red;
-          }
+      font: {
+        weight: 600;
+        size: 22px;
+      }
+      button {
+        transition: all 0.2s ease-out;
+        padding: 5px 15px;
+        display: flexbox;
+        width: 100px;
+        height: 40px;
+        background-color: $red;
+        color: $white;
+        font-size: medium;
+        border: 2px solid $red;
+        border-radius: 24px;
+        &:hover {
+          background-color: $redDarker;
+          border: 1px solid $red;
         }
       }
     }
   }
 }
-
-.divNEW {
-  padding: 50px;
+.divNEW{
   background: $primary;
-  .divNewContainer {
+  .ulNewContainer{
+    width: 100%;
+    height: calc(400 * 3);
+    margin: 0 auto;
+    list-style-type:none;
+     .slick-dots {
+    bottom: -80px;
+
+    li {
+      margin: 25px;
+      button::before {
+        content: "  ";
+        background-color: $pramaryDarker;
+        width: 60px;
+        height: 15px;
+        border-radius: 2px;
+      }
+    }
+    .slick-active {
+      button::before {
+        background-color: $blue;
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 100;
+  }
+  .slick-arrow {
+    right: 0px;
+  }
+
+  .slick-prev:before {
+    content: url(../components/CoursePage/img/toleft.svg);
+    left: 90px;
+    top: -10px;
+    position: absolute;
+    opacity: 0.35;
+    transition: all 0.8s;
+  }
+  .slick-next:before {
+    content: url(../components/CoursePage/img/toright.svg);
+    right: 50px;
+    top: -10px;
+    position: absolute;
+    opacity: 0.35;
+    transition: all 0.8s;
+  }
+  }
+}
+.divAllCourse {
+  margin: 10px;
+  padding: 100px;
+  background: $primary;
+  .ulAllCourseContainer {
     display: grid;
     grid-template-columns: auto auto auto auto;
     width: 90%;
     height: calc(400 * 3);
     margin: 0 auto;
+    list-style-type:none;
+    
   }
 }
 .dCard {
   text-decoration: none;
   list-style-type: none;
-  padding: 30px;
-  width: 260px;
-  display: flexbox;
-  height: 360px;
+  font-size: 18px;
+  width: 280px;
+  display: flex;
+  position: relative;
+  height: 100%;
   flex-direction: column;
   transition: all 0.1s ease-in-out;
   color: $primaryLightestest;
   &:hover {
-    width: 270px;
-    height: 370px;
-    padding: 0 5px;
+    border: 2px solid $primaryLightestest;
+ -webkit-box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 0px 21px 7px rgba(255,255,255,0.35); 
+box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 0px 21px 7px rgba(255,255,255,0.35);
+  }
+  .dCardScore {
+    justify-content: baseline;
+    span {
+      display: inline-flex;
+    }
   }
   .dCardStar {
     color: $redDarker;
@@ -449,7 +522,7 @@ body {
   }
   .dCardStarActive {
     path {
-      fill: $yellow;
+      fill: $primaryLightestest;
     }
   }
   .dCardTitle {
@@ -462,20 +535,24 @@ body {
     letter-spacing: 0.1em;
   }
   .imgCard {
-    width: 100%;
+    object-fit: contain;
+    position:relative;
   }
   .shopCart {
-    position: relative;
-    top: -50px;
+    position:absolute;
+    top: 130px;
+    right: 10px;
     padding: 5px;
+    display: flex;
     float: right;
     font-size: 25px;
     z-index: 300;
     color: $red;
   }
   .dCardMark {
-    position: relative;
-    top: -50px;
+    position: absolute;
+    top: 130px;
+    left: 10px;
     font-size: 25px;
     padding: 5px;
     color: $red;
@@ -484,7 +561,6 @@ body {
   .dCardTeacher {
     color: $primary;
     font: {
-      style: normal;
       weight: 400;
       size: 16px;
     }
@@ -497,8 +573,9 @@ body {
     padding: 10px;
     background-color: $white;
     position: relative;
+
+    border-bottom: 8px solid #e23965;
     align-items: center;
-    top: -50px;
     height: 200px;
   }
   .dCardPrice {
@@ -512,7 +589,7 @@ body {
     color: $red;
     float: right;
     position: relative;
-    top: -30px;
+    top: -20px;
   }
   svg {
     path {
@@ -539,8 +616,8 @@ body {
     letter-spacing: 0.15em;
     color: $white;
     border-radius: 24px;
-    &:hover{
-      background-color:$blueDarker;
+    &:hover {
+      background-color: $blueDarker;
     }
   }
 }

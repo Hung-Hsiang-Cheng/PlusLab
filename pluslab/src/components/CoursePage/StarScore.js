@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
 const StarScore = () => {
+  
   const State = {
     ToYou: [
       {
@@ -56,21 +57,23 @@ const StarScore = () => {
     ],
   };
 
+ 
   let starBox = [];
-
-  for (let i = 0; i < State.ToYou[0].star; i++) {
-    starBox.push("sOnStar");
-  }
-
-  if (starBox.length < 5) {
-    for (let i = 0; i < 5 - starBox.length; i++) {
-      starBox.push("");
+ 
+    for (let i = 0; i < State.ToYou[0].star; i++) {
+      starBox.push("sOnStar");
     }
-  }
 
-  return (
+    if (starBox.length < 5) {
+      for (let i = 0; i < 5 - State.ToYou[0].star; i++) {
+        starBox.push("");
+      }
+   
+
+    return (
+   
     <Fragment>
-      {starBox.map((v, i) => {
+      {starBox.map((v,i) => {
         return (
           <span key={i}>
             <svg
@@ -92,5 +95,6 @@ const StarScore = () => {
     </Fragment>
   );
 };
+}
 
 export default StarScore;

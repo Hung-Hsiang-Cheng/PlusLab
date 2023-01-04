@@ -205,12 +205,12 @@ body {
   bottom: -80px;
 }
 .dHotCarousel .slick-dots li {
-  margin: 30px;
+  margin: 25px;
 }
 .dHotCarousel .slick-dots li button::before {
   content: "  ";
-  background-color: #44464f;
-  width: 70px;
+  background-color: #000000;
+  width: 60px;
   height: 15px;
   border-radius: 2px;
 }
@@ -221,17 +221,26 @@ body {
 .dHotCarousel .slick-next {
   z-index: 100;
 }
+.dHotCarousel .slick-arrow {
+  right: 0px;
+}
+.dHotCarousel .slick-arrow:hover {
+  opacity: 0.85;
+}
 .dHotCarousel .slick-prev:before {
   content: url(../components/CoursePage/img/ftoleft.svg);
-  left: 50px;
+  left: 80px;
   position: absolute;
   opacity: 0.35;
   top: -10px;
   transition: all 0.8s;
 }
+.dHotCarousel .slick-prev:before:hover {
+  opacity: 0.85;
+}
 .dHotCarousel .slick-next:before {
   content: url(../components/CoursePage/img/ftoright.svg);
-  right: 50px;
+  right: 60px;
   position: absolute;
   opacity: 0.35;
   transition: all 0.8s;
@@ -250,28 +259,28 @@ body {
   bottom: -80px;
 }
 .divToYou .slick-dots li {
-  margin: 30px;
+  margin: 25px;
 }
 .divToYou .slick-dots li button::before {
   content: "  ";
-  background-color: #44464f;
-  width: 70px;
+  background-color: #000000;
+  width: 60px;
   height: 15px;
   border-radius: 2px;
 }
 .divToYou .slick-dots .slick-active button::before {
-  background-color: #003dcb;
+  background-color: #4967ff;
 }
 .divToYou .slick-prev,
 .divToYou .slick-next {
   z-index: 100;
 }
-.divToYou .slick-next {
-  right: -30px;
+.divToYou .slick-arrow {
+  right: 0px;
 }
 .divToYou .slick-prev:before {
   content: url(../components/CoursePage/img/toleft.svg);
-  left: 100px;
+  left: 90px;
   top: -10px;
   position: absolute;
   opacity: 0.35;
@@ -279,7 +288,7 @@ body {
 }
 .divToYou .slick-next:before {
   content: url(../components/CoursePage/img/toright.svg);
-  right: 100px;
+  right: 50px;
   top: -10px;
   position: absolute;
   opacity: 0.35;
@@ -288,7 +297,7 @@ body {
 .divToYou .dBecause {
   padding: 20px;
   color: #ffffff;
-  font-size: medium;
+  font-size: 25px;
   text-align: center;
 }
 .divToYou .divItems {
@@ -296,33 +305,37 @@ body {
   width: 80%;
   margin: 0 auto;
   display: flex;
+  border-bottom: 10px solid #e23965;
 }
 .divToYou .divItems .imgClass {
   float: left;
 }
-.divToYou .divItems .dClasstext {
+.divToYou .divItems .imgClass img {
+  height: 100%;
+}
+.divToYou .dClasstext {
   float: right;
   padding: 30px;
   color: #9d9faa;
 }
-.divToYou .divItems .dClasstext .sStar {
+.divToYou .dClasstext .sStar {
   color: #aa003b;
 }
-.divToYou .divItems .dClasstext .score {
+.divToYou .dClasstext .score {
   padding: 3px px;
 }
-.divToYou .divItems .dClasstext .score span {
+.divToYou .dClasstext .score span {
   padding: 0 3px;
   vertical-align: middle;
 }
-.divToYou .divItems .dClasstext .score .sPersonCount,
-.divToYou .divItems .dClasstext .score .sClock {
+.divToYou .dClasstext .score .sPersonCount,
+.divToYou .dClasstext .score .sClock {
   float: right;
 }
-.divToYou .divItems .dClasstext .score .sOnStar path {
+.divToYou .dClasstext .score .sOnStar path {
   fill: #e0e03b;
 }
-.divToYou .divItems .dClasstext h5 {
+.divToYou .dClasstext h5 {
   padding: 10px;
   line-height: 48px;
   letter-spacing: 0.1em;
@@ -330,10 +343,10 @@ body {
   font-weight: 700;
   font-size: 32px;
 }
-.divToYou .divItems .dClasstext p {
+.divToYou .dClasstext p {
   padding: 10px;
 }
-.divToYou .divItems .dClasstext .dClassPrice {
+.divToYou .dClasstext .dClassPrice {
   line-height: 50px;
   letter-spacing: 0.1em;
   color: #e23965;
@@ -341,7 +354,7 @@ body {
   font-weight: 600;
   font-size: 22px;
 }
-.divToYou .divItems .dClasstext .dClassPrice button {
+.divToYou .dClasstext .dClassPrice button {
   transition: all 0.2s ease-out;
   padding: 5px 15px;
   display: flexbox;
@@ -353,45 +366,102 @@ body {
   border: 2px solid #e23965;
   border-radius: 24px;
 }
-.divToYou .divItems .dClasstext .dClassPrice button:hover {
+.divToYou .dClasstext .dClassPrice button:hover {
   background-color: #aa003b;
   border: 1px solid #e23965;
 }
 
 .divNEW {
-  padding: 50px;
   background: #1d1f27;
 }
-.divNEW .divNewContainer {
+.divNEW .ulNewContainer {
+  width: 100%;
+  height: 1200;
+  margin: 0 auto;
+  list-style-type: none;
+}
+.divNEW .ulNewContainer .slick-dots {
+  bottom: -80px;
+}
+.divNEW .ulNewContainer .slick-dots li {
+  margin: 25px;
+}
+.divNEW .ulNewContainer .slick-dots li button::before {
+  content: "  ";
+  background-color: #000000;
+  width: 60px;
+  height: 15px;
+  border-radius: 2px;
+}
+.divNEW .ulNewContainer .slick-dots .slick-active button::before {
+  background-color: #4967ff;
+}
+.divNEW .ulNewContainer .slick-prev,
+.divNEW .ulNewContainer .slick-next {
+  z-index: 100;
+}
+.divNEW .ulNewContainer .slick-arrow {
+  right: 0px;
+}
+.divNEW .ulNewContainer .slick-prev:before {
+  content: url(../components/CoursePage/img/toleft.svg);
+  left: 90px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+}
+.divNEW .ulNewContainer .slick-next:before {
+  content: url(../components/CoursePage/img/toright.svg);
+  right: 50px;
+  top: -10px;
+  position: absolute;
+  opacity: 0.35;
+  transition: all 0.8s;
+}
+
+.divAllCourse {
+  margin: 10px;
+  padding: 100px;
+  background: #1d1f27;
+}
+.divAllCourse .ulAllCourseContainer {
   display: grid;
   grid-template-columns: auto auto auto auto;
   width: 90%;
   height: 1200;
   margin: 0 auto;
+  list-style-type: none;
 }
 
 .dCard {
   text-decoration: none;
   list-style-type: none;
-  padding: 30px;
-  width: 260px;
-  display: flexbox;
-  height: 360px;
+  font-size: 18px;
+  width: 280px;
+  display: flex;
+  position: relative;
+  height: 100%;
   flex-direction: column;
   transition: all 0.1s ease-in-out;
   color: #9d9faa;
 }
 .dCard:hover {
-  width: 270px;
-  height: 370px;
-  padding: 0 5px;
+  border: 2px solid #9d9faa;
+  box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
+}
+.dCard .dCardScore {
+  justify-content: baseline;
+}
+.dCard .dCardScore span {
+  display: inline-flex;
 }
 .dCard .dCardStar {
   color: #aa003b;
   padding: 0 5px;
 }
 .dCard .dCardStarActive path {
-  fill: #e0e03b;
+  fill: #9d9faa;
 }
 .dCard .dCardTitle {
   color: #4967ff;
@@ -401,20 +471,25 @@ body {
   letter-spacing: 0.1em;
 }
 .dCard .imgCard {
-  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
 }
 .dCard .shopCart {
-  position: relative;
-  top: -50px;
+  position: absolute;
+  top: 130px;
+  right: 10px;
   padding: 5px;
+  display: flex;
   float: right;
   font-size: 25px;
   z-index: 300;
   color: #e23965;
 }
 .dCard .dCardMark {
-  position: relative;
-  top: -50px;
+  position: absolute;
+  top: 130px;
+  left: 10px;
   font-size: 25px;
   padding: 5px;
   color: #e23965;
@@ -422,7 +497,6 @@ body {
 }
 .dCard .dCardTeacher {
   color: #1d1f27;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 33px;
@@ -433,8 +507,8 @@ body {
   padding: 10px;
   background-color: #ffffff;
   position: relative;
+  border-bottom: 8px solid #e23965;
   align-items: center;
-  top: -50px;
   height: 200px;
 }
 .dCard .dCardPrice {
@@ -446,7 +520,7 @@ body {
   color: #e23965;
   float: right;
   position: relative;
-  top: -30px;
+  top: -20px;
 }
 .dCard svg path {
   padding: 0 3px;
