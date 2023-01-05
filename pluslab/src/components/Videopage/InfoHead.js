@@ -3,19 +3,19 @@ import React from "react";
 const InfoHead = () => {
   return (
     <div>
-      <div class="infoHead">
-        <div class="infoHeadTitle">
+      <div className="infoHead">
+        <div className="infoHeadTitle">
           <span>20堂課教你存好股，打造投資現金流</span>
         </div>
-        <div class="infoHeadPrice"><span>NT$ 1,600</span></div>
-        <div class="infoHeadShopCart">
+        <div className="infoHeadPrice"><span>NT$ 1,600</span></div>
+        <div className="infoHeadShopCart">
           <button type="button"><span>加入購物車</span></button>
         </div>
-        <div class="infoHeadBuyNow">
+        <div className="infoHeadBuyNow">
           <button type="button"><span>立即購買</span></button>
         </div>
       </div>
-      <div class="containerLine"></div>
+      <div className="containerLine"></div>
     </div>
   )
 }

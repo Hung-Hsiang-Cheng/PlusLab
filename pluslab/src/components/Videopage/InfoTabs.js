@@ -1,15 +1,15 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 
 const InfoTabs = () => {
 
-  const [toggleState, setToggleState] = useState(1);
+  // const [toggleState, setToggleState] = useState(1);
 
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
+  // const toggleTab = (index) => {
+  //   setToggleState(index);
+  // };
   return (
-    <div class="infoBtn">
+    <div className="infoBtn">
       <div>
         <button type="button"><span>課程介紹</span></button>
       </div>

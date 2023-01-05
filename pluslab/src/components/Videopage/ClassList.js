@@ -2,12 +2,12 @@ import React from "react";
 
 const ClassList = () => {
   return (
-    <div class="classListContainer">
-      <div class="classListHead" >
+    <div className="classListContainer">
+      <div className="classListHead" >
         <span>課程列表</span>
       </div>
-      <div class="classListChapter">
-        <div class="expandSvg">
+      <div className="classListChapter">
+        <div className="expandSvg">
           <svg
             width="19"
             height="19"
@@ -21,7 +21,7 @@ const ClassList = () => {
             />
           </svg>
         </div>
-        <div class="classListChapterTag"><span>第一章 主題概念</span></div>
+        <div className="classListChapterTag"><span>第一章 主題概念</span></div>
       </div>
     </div>
   )

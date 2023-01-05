@@ -2,7 +2,7 @@ import React from "react";
 
 const InfoBtn = () => {
   return (
-    <div class="infoBtn">
+    <div className="infoBtn">
       <div>
         <button type="button"><span>課程介紹</span></button>
       </div>

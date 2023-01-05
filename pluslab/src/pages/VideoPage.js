@@ -5,25 +5,27 @@ import InfoHead from "../components/Videopage/InfoHead";
 // import InfoBtn from "../components/Videopage/InfoBtn";
 import InfoTabs from "../components/Videopage/InfoTabs";
 
+
 const VideoPage = () => {
   return (
-    <vi>
-      <div class="videoContainer">
+    <div className="allV">
+      <div className="videoContainer">
         <VideoInterface />
         <ClassList />
+
       </div>
-      <div class="infoContainer">
+      <div className="infoContainer">
         <InfoHead />
 
-        <div class="infoStar"></div>
+        <div className="infoStar"></div>
         {/* <InfoBtn /> */}
         <InfoTabs />
-        <div class="infoContent">
-          <div class="infoContentText"></div>
-          <div class="infoTeacher"></div>
+        <div className="infoContent">
+          <div className="infoContentText"></div>
+          <div className="infoTeacher"></div>
         </div>
       </div>
-    </vi>
+    </div>
   );
 }
 
