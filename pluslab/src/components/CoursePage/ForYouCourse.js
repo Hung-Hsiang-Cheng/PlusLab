@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const ForYouCourse = () => {
+const ForYouCourse = (props) => {
   const State = {
     ToYou: [
       {
@@ -49,7 +49,7 @@ const ForYouCourse = () => {
         title: "新手必學的3件事 - 進場點、停損點、停利點",
         special: 3200,
         text: " 一堂能讓各種交易風格都能更強大的衝刺課程！夠短，夠直接，能兼容在不同投資思維之中，能兼容在不同投資思維之中",
-        star: 4,
+        star: 5,
         ratecount: 41,
         students: 752,
         videLength: 2.5,
@@ -92,7 +92,7 @@ const ForYouCourse = () => {
                 <div className="dClasstext">
                   <div className="score">
                     <span className="sStar">{t.star}</span>
-                    <StarScore />
+                    <StarScore star={t.star} />
                     <span>({t.ratecount})</span>
                     <span className="sPersonCount">
                       <svg
