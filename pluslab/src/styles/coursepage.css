@@ -456,9 +456,11 @@ body {
   border: 2px solid transparent;
 }
 .dCard:hover {
-  filter: saturate(6);
   border: 2px solid #9d9faa;
   box-shadow: 0px 0px 0px 1px #a0a0a0, inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
+}
+.dCard > img:hover, .dCard > div:hover {
+  filter: saturate(3);
 }
 .dCard .dCardScore {
   justify-content: baseline;

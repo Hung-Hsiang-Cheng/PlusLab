@@ -96,22 +96,76 @@ const RecentClass = () => {
     ],
   };
 
-  const settings = {
+  const settings2 = {
     className: "center",
     centerMode: true,
     infinite: true,
     dot: false,
     speed: 500,
-    centerPadding: "70px",
-    slidesToShow: 4,
+    centerPadding: "20px",
+    slidesToShow: 5,
     slidesToScroll: 1,
-  
+    responsive: [
+      {
+        breakpoint: 1736,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "90px",
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1645,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "40px",
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1470,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "80px",
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1272,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          infinite: true,
+          dots: false,
+        },
+      },
+    ],
   };
 
   return (
     <div className="divNEW">
       <ul className="ulNewContainer">
-        <Slider {...settings}>
+        <Slider {...settings2}>
           {State.NewCourse.map((v) => {
             return (
               <a href="/">
