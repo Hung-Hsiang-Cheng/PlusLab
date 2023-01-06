@@ -12,21 +12,20 @@ const Cartpage = () => {
       key: 1,
       title: "購物車",
       iconPath: cart,
-      compos:OrderMod,
+      compos: OrderMod,
     },
     {
       key: 2,
       title: "我收藏的課程",
       iconPath: collectCourse,
-      compos: Mark,
+      compos: Marks,
     },
   ];
 
   return (
     <Fragment>
       <div className="headerss"></div>
-      
-   
+
       {title.map((t) => {
         return (
           <div className="dCartContainer" key={t.key}>
@@ -38,7 +37,6 @@ const Cartpage = () => {
             </div>
             <div className="cartcompos">
               <t.compos />
-              
             </div>
           </div>
         );
