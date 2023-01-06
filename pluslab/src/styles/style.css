@@ -649,20 +649,227 @@ footer .contactIconBox :last-child svg {
 }
 .dashboardMain .mainBox {
   width: 82vw;
-  padding-top: 192px;
+  padding-top: 180px;
   display: flex;
   justify-content: space-between;
 }
 .dashboardMain .mainBox .collectionStock {
-  padding: 12px;
-  width: 221px;
+  padding: 12px 10px 0px 20px;
+  width: 345px;
   height: 588px;
   background-color: #2f3137;
 }
-.dashboardMain .mainBox .mainStock {
-  width: 1280px;
-  height: 612px;
+.dashboardMain .mainBox .collectionStock .collectionStockTitle {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 63px;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockTitle input {
+  width: 220px;
   background-color: #1d1f27;
+  border-radius: 20px;
+  height: 40px;
+  margin-left: 20px;
+  padding: 0 0 0 52px;
+  color: #9d9faa;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  border: none;
+  background-image: url("../img/searchIcon.png");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 16px;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockTitle .collection .collectionBackground {
+  cursor: pointer;
+  fill: #2f3137;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockTitle .collection .collectionBackground:hover {
+  fill: #e23965;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockListBox {
+  height: 513px;
+  overflow-y: auto;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockListBox::-webkit-scrollbar {
+  position: relative;
+  top: 12px;
+  width: 8px;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockListBox::-webkit-scrollbar-track-piece {
+  background: #1d1f27;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockListBox::-webkit-scrollbar-thumb {
+  background-color: #6f717b;
+}
+.dashboardMain .mainBox .collectionStock table {
+  border-collapse: collapse;
+  position: relative;
+  top: -2px;
+}
+.dashboardMain .mainBox .collectionStock table svg {
+  position: relative;
+  top: 3px;
+}
+.dashboardMain .mainBox .collectionStock table tr:hover {
+  background-color: #6f717b;
+  cursor: pointer;
+}
+.dashboardMain .mainBox .collectionStock table td {
+  height: 58px;
+  border-top: solid 2px #6f717b;
+}
+.dashboardMain .mainBox .collectionStock table tr > td:nth-child(1) {
+  width: 43px;
+}
+.dashboardMain .mainBox .collectionStock table tr > td:nth-child(2) {
+  width: 180px;
+}
+.dashboardMain .mainBox .collectionStock table tr > td:nth-child(3) {
+  width: 100px;
+  text-align: right;
+}
+.dashboardMain .mainBox .collectionStock table p {
+  position: relative;
+  top: -1px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+.dashboardMain .mainBox .collectionStock table h6 {
+  position: relative;
+  top: -1px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #9d9faa;
+  letter-spacing: 0.1em;
+}
+.dashboardMain .mainBox .mainStock {
+  width: 1142px;
+  height: 612px;
+}
+.dashboardMain .mainBox .mainStock h1 {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0.15em;
+}
+.dashboardMain .mainBox .mainStock h1 span {
+  padding-left: 16px;
+  font-weight: 500;
+  font-size: 30px;
+  color: #9d9faa;
+  letter-spacing: 0.1em;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer {
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer .stockInfoBox {
+  width: 370px;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer .stockInfoBox h2 {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer .stockInfoBox h2 :first-child {
+  margin-left: 8px;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer .stockInfoBox h2 span {
+  font-weight: 700;
+  font-size: 22px;
+  padding-left: 8px;
+  letter-spacing: 0.02em;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer .stockInfoBox h3 {
+  padding-top: 4px;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer .stockInfoBox h6 {
+  padding-top: 4px;
+  color: #9d9faa;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer table {
+  border-collapse: collapse;
+  color: #ffffff;
+  width: 220px;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer table tr {
+  height: 36px;
+  border-bottom: solid 1.5px white;
+}
+.dashboardMain .mainBox .mainStock .stockInfoContainer table tr > td:nth-child(2) {
+  text-align: right;
+}
+.dashboardMain .mainBox .mainStock .stockTab table {
+  margin-top: 12px;
+  border: none;
+  border-collapse: collapse;
+}
+.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(4) {
+  width: 875px;
+}
+.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(2) {
+  width: 30px;
+}
+.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(4) {
+  width: 875px;
+}
+.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(4) {
+  width: 875px;
+}
+.dashboardMain .mainBox .mainStock .stockTab table tr {
+  border-bottom: solid 2px #9d9faa;
+  height: 56px;
+}
+.dashboardMain .mainBox .mainStock .stockTab table h2 {
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  color: #4967ff;
+  padding-bottom: 6px;
+  cursor: pointer;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .googleChart {
+  position: relative;
+  top: 22px;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice {
+  position: relative;
+  width: 300px;
+  top: -310px;
+  left: 800px;
+  border-collapse: collapse;
+  border: solid 1px gold;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tr {
+  height: 40px;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice p {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.15em;
 }
 
 .dashboardBottom {
@@ -671,7 +878,7 @@ footer .contactIconBox :last-child svg {
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 36px;
+  top: 12px;
 }
 .dashboardBottom h3 {
   display: inline;
@@ -689,7 +896,7 @@ footer .contactIconBox :last-child svg {
 }
 .dashboardBottom .dashboardBottomRow1,
 .dashboardBottom .dashboardBottomRow2 {
-  width: 81vw;
+  width: 81.15vw;
   display: flex;
   justify-content: space-between;
   background-color: #1d1f27;
@@ -698,7 +905,7 @@ footer .contactIconBox :last-child svg {
 .dashboardBottom .dashboardBottomRow1 .nowOrder,
 .dashboardBottom .dashboardBottomRow2 .addOrder,
 .dashboardBottom .dashboardBottomRow2 .nowOrder {
-  margin-top: 32px;
+  margin-top: 36px;
   padding: 32px;
   width: 696px;
   height: 328px;
@@ -922,7 +1129,7 @@ footer .contactIconBox :last-child svg {
 .dashboardBottom .dashboardBottomRow1 .orderHistory,
 .dashboardBottom .dashboardBottomRow2 .nowTotal,
 .dashboardBottom .dashboardBottomRow2 .orderHistory {
-  margin-top: 32px;
+  margin-top: 36px;
   padding: 32px;
   width: 696px;
   height: 426px;
@@ -1087,23 +1294,20 @@ footer .contactIconBox :last-child svg {
 .nowTotal .nowTotalTitle tr th svg {
   padding-left: 4px;
 }
-.nowTotal .nowTotalTitle tr th svg path {
-  fill: gold;
-}
 .nowTotal .nowTotalTitle tr > th:nth-child(1) {
-  width: 181px;
+  width: 199px;
   text-align: left;
 }
 .nowTotal .nowTotalTitle tr > th:nth-child(2) {
-  width: 207px;
-  text-align: left;
+  width: 184px;
+  text-align: right;
 }
 .nowTotal .nowTotalTitle tr > th:nth-child(3) {
-  width: 156px;
+  width: 183px;
   text-align: right;
 }
 .nowTotal .nowTotalTitle tr > th:nth-child(4) {
-  width: 220px;
+  width: 198px;
   text-align: right;
 }
 .nowTotal .nowTotalTitle tr > th:nth-child(4) svg {
@@ -1126,54 +1330,190 @@ footer .contactIconBox :last-child svg {
 .nowTotal .nowTotalListBox::-webkit-scrollbar-thumb {
   background-color: #6f717b;
 }
-.nowTotal .nowTotalListBox .nowOrderList {
+.nowTotal .nowTotalListBox .nowTotalList {
   position: relative;
   top: -2px;
   border: none;
   border-collapse: collapse;
   width: 674px;
 }
-.nowTotal .nowTotalListBox .nowOrderList tr {
+.nowTotal .nowTotalListBox .nowTotalList tr {
   border-top: solid 2px #6f717b;
   height: 70px;
 }
-.nowTotal .nowTotalListBox .nowOrderList tr td .cancelButton {
-  cursor: pointer;
-}
-.nowTotal .nowTotalListBox .nowOrderList tr td .cancelButton path {
-  fill: #9d9faa;
-}
-.nowTotal .nowTotalListBox .nowOrderList tr td .cancelButton:hover path {
-  fill: #ffffff;
-}
-.nowTotal .nowTotalListBox .nowOrderList tr td span {
+.nowTotal .nowTotalListBox .nowTotalList tr td span {
   color: #9d9faa;
   letter-spacing: 0.1em;
 }
-.nowTotal .nowTotalListBox .nowOrderList tr > td:nth-child(1) {
-  width: 45px;
+.nowTotal .nowTotalListBox .nowTotalList tr > td:nth-child(1) {
+  width: 193px;
 }
-.nowTotal .nowTotalListBox .nowOrderList tr > td:nth-child(2) {
-  width: 130px;
+.nowTotal .nowTotalListBox .nowTotalList tr > td:nth-child(2) {
+  width: 176px;
+  text-align: right;
 }
-.nowTotal .nowTotalListBox .nowOrderList tr > td:nth-child(2) p {
-  position: relative;
-  top: -4px;
-}
-.nowTotal .nowTotalListBox .nowOrderList tr > td:nth-child(3) {
-  width: 218px;
-}
-.nowTotal .nowTotalListBox .nowOrderList tr > td:nth-child(3) p {
+.nowTotal .nowTotalListBox .nowTotalList tr > td:nth-child(2) p {
   position: relative;
   top: -2px;
 }
-.nowTotal .nowTotalListBox .nowOrderList tr > td:nth-child(4) {
+.nowTotal .nowTotalListBox .nowTotalList tr > td:nth-child(3) {
+  width: 176px;
+  text-align: right;
+}
+.nowTotal .nowTotalListBox .nowTotalList tr > td:nth-child(3) p {
+  position: relative;
+  top: -2px;
+}
+.nowTotal .nowTotalListBox .nowTotalList tr > td:nth-child(4) {
   width: 168px;
   text-align: right;
 }
-.nowTotal .nowTotalListBox .nowOrderList tr > td:nth-child(5) {
-  width: 156px;
+.nowTotal .nowTotalListBox .nowTotalList tr > td:nth-child(4) p {
+  position: relative;
+  top: -2px;
+}
+
+.orderHistory .titleBox {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4px;
+  border-bottom: solid 2px #6f717b;
+}
+.orderHistory .orderHistoryBox {
+  height: 116px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderHistory .orderHistoryBox .pr12 {
+  padding-right: 12px;
+}
+.orderHistory .orderHistoryBox select {
+  width: 11.2vw;
+}
+.orderHistory .orderHistoryBox input {
+  width: 11.2vw;
+}
+.orderHistory .orderHistoryBox #orderTime {
+  width: 11vw;
+  height: 40px;
+  background-color: #6f717b;
+  color: #ffffff;
+  font-size: 22px;
+  padding-left: 8px;
+  border: none;
+  letter-spacing: 0.1em;
+}
+.orderHistory .orderHistoryBox #orderTime::-webkit-outer-spin-button, .orderHistory .orderHistoryBox #orderTime::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.orderHistory .orderHistoryBox #stockName {
+  width: 11vw;
+  height: 40px;
+  background-color: #6f717b;
+  color: #ffffff;
+  font-size: 22px;
+  padding-left: 8px;
+  border: none;
+  letter-spacing: 0.1em;
+}
+.orderHistory .orderHistoryBox #stockName::-webkit-outer-spin-button, .orderHistory .orderHistoryBox #stockName::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.orderHistory .orderHistoryTitle {
+  height: 40px;
+  border-top: solid 2px #6f717b;
+  border-bottom: solid 2px #6f717b;
+  border-collapse: collapse;
+  width: 100%;
+}
+.orderHistory .orderHistoryTitle p {
+  display: inline-block;
+  padding-bottom: 2px;
+  color: #9d9faa;
+}
+.orderHistory .orderHistoryTitle tr > th:nth-child(1) {
+  width: 182px;
+  text-align: left;
+}
+.orderHistory .orderHistoryTitle tr > th:nth-child(2) {
+  width: 202px;
+  text-align: left;
+}
+.orderHistory .orderHistoryTitle tr > th:nth-child(3) {
+  width: 172px;
   text-align: right;
+}
+.orderHistory .orderHistoryTitle tr > th:nth-child(4) {
+  width: 208px;
+  text-align: right;
+}
+.orderHistory .orderHistoryTitle tr > th:nth-child(4) p {
+  padding-right: 22px;
+}
+.orderHistory .orderHistoryListBox {
+  width: 100%;
+  height: 214px;
+  overflow-y: auto;
+  position: relative;
+}
+.orderHistory .orderHistoryListBox::-webkit-scrollbar {
+  position: relative;
+  top: 12px;
+  width: 8px;
+}
+.orderHistory .orderHistoryListBox::-webkit-scrollbar-track-piece {
+  background: #1d1f27;
+}
+.orderHistory .orderHistoryListBox::-webkit-scrollbar-thumb {
+  background-color: #6f717b;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList {
+  position: relative;
+  top: -2px;
+  border: none;
+  border-collapse: collapse;
+  width: 674px;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr {
+  border-top: solid 2px #6f717b;
+  height: 70px;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(1) {
+  width: 173px;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(1) p {
+  position: relative;
+  top: -2px;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(2) {
+  width: 196px;
+  text-align: left;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(2) p {
+  position: relative;
+  top: -2px;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(2) span {
+  color: #9d9faa;
+  letter-spacing: 0.1em;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(3) {
+  width: 167px;
+  text-align: right;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(3) p {
+  position: relative;
+  top: -2px;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(4) {
+  width: 177px;
+  text-align: right;
+}
+.orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(4) p {
+  position: relative;
+  top: -2px;
 }
 
 .allV {
