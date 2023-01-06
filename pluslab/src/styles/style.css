@@ -1642,7 +1642,7 @@ footer .contactIconBox :last-child svg {
   background-color: #9d9faa;
 }
 .allV .videoContainer .videoControlBar .fullScreenBtn {
-  margin: 0 0 0 2rem;
+  margin: 0 1rem 0 1rem;
 }
 .allV .classListContainer {
   display: block;
