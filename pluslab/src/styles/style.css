@@ -1222,7 +1222,6 @@ footer .contactIconBox :last-child svg {
   position: absolute;
   bottom: 0;
   width: 100%;
-  transform: translateY(100%) translateY(-5px);
   transition: all 0.3s;
   flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.1);
@@ -1268,8 +1267,8 @@ footer .contactIconBox :last-child svg {
 .allV .videoContainer .videoControlBar .videoSpeed {
   background-color: white;
   width: 82px;
-  height: 43px;
-  display: none;
+  height: 35px;
+  display: flex;
   position: relative;
   font-weight: 700;
 }
@@ -1285,7 +1284,7 @@ footer .contactIconBox :last-child svg {
   z-index: 1000;
   bottom: 100%;
   margin-bottom: 3rem;
-  display: flex;
+  display: none;
 }
 .allV .videoContainer .videoControlBar .videoSpeed .videoSpeedList ul {
   list-style-type: none;

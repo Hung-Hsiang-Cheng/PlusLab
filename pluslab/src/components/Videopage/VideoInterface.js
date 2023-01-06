@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import videoo from './image/zzz.mp4';
+
 const VideoInterface = () => {
   const videoSelf = videoo;
   // const documentRef = useRef(null);
@@ -10,9 +11,13 @@ const VideoInterface = () => {
   const progressBarRef = useRef(null);
   const voiceBarRef = useRef(null);
   const voiceFillRef = useRef(null);
+  const showSpeedListRef = useRef(null)
+  const vidoeSpeedUlRef = useRef(null)
   const [VideoEle, setVideoEle] = useState(false);
   const [fullScreenEle, setFullScreenEle] = useState(1);
   const [className, setClassName] = useState('videoControlBar');
+  const [speed, setSpeed] = useState('1')
+  const [speedBtn, setSpeedBtn] = useState(false)
 
   // 滑鼠移動增加className
   useEffect(() => {
@@ -111,6 +116,21 @@ const VideoInterface = () => {
       document.exitFullscreen();
     }
   }
+  // 影片播放速度按鈕點擊開合
+  const switchSpeed = (e) => {
+    if (speedBtn === false) {
+      setSpeedBtn(true);
+      showSpeedListRef.current.style.display = 'flex';
+    } else {
+      setSpeedBtn(false);
+      showSpeedListRef.current.style.display = 'none';
+    }
+    // console.log(showSpeedListRef.current.querySelectorAll('li').indexOf());
+    console.log(e.target);
+  }
+  // 點擊切換影片速度
+
+
 
 
 
@@ -170,17 +190,17 @@ const VideoInterface = () => {
           </div>
         </div>
         <div className=" videoSpeed">
-          <div className="videoSpeedList">
-            <ul>
-              <li>2x</li>
-              <li>1.5X</li>
-              <li>1.25x</li>
-              <li>1x</li>
-              <li>0.75x</li>
-              <li>0.5x</li>
+          <div className="videoSpeedList" ref={showSpeedListRef}>
+            <ul ref={vidoeSpeedUlRef}>
+              <li value={2}>2x</li>
+              <li value={1.5}>1.5X</li>
+              <li value={1.25}>1.25x</li>
+              <li value={1}>1x</li>
+              <li value={0.75}>0.75x</li>
+              <li value={0.5}>0.5x</li>
             </ul>
           </div>
-          <button><span>1.5X</span></button>
+          <button onClick={switchSpeed}><span>{speed}x</span></button>
         </div>
         <div className="videoBtnContainer fullScreenBtn">
           <button onClick={videoFullScreen}>

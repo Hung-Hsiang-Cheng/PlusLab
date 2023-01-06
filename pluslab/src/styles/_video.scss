@@ -42,7 +42,7 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        transform: translateY(100%) translateY(-5px);
+        // transform: translateY(100%) translateY(-5px);
         transition: all .3s;
         flex-wrap: wrap;
         background: rgba(0,0,0,0.1);
@@ -90,8 +90,8 @@
         .videoSpeed{
           background-color: white;
           width: 82px;
-          height: 43px;
-          display: none;
+          height: 35px;
+          display: flex;
           position: relative;
           font-weight: 700;
           button{
@@ -108,7 +108,7 @@
             // right: 1000;
             bottom: 100%;
             margin-bottom: 3rem;
-            display: flex;
+            display: none;
             ul{
               list-style-type: none;
               
