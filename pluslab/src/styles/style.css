@@ -1516,6 +1516,250 @@ footer .contactIconBox :last-child svg {
   top: -2px;
 }
 
+.allV {
+  overflow-x: hidden;
+}
+.allV .videoContainer {
+  position: relative;
+  top: 88px;
+  background-color: #9d9faa;
+  display: flex;
+  width: 100vw;
+  height: 76.76vh;
+  overflow: hidden;
+}
+.allV .videoContainer .video {
+  display: block;
+  width: 77.24%;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
+.allV .videoContainer .video:hover .hover {
+  transform: translateY(0);
+}
+.allV .videoContainer .video:hover .progress {
+  height: 20px;
+}
+.allV .videoContainer .video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.allV .videoContainer .video video::-webkit-media-controls {
+  display: none;
+}
+.allV .videoContainer button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.allV .videoContainer .videoControlBar {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.3s;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.1);
+}
+.allV .videoContainer .videoControlBar .progress {
+  flex: 10;
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  height: 5px;
+  transition: height 0.3s;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: ew-resize;
+}
+.allV .videoContainer .videoControlBar .progress .progressFilled {
+  background: #e0e03b;
+  flex: 0;
+}
+.allV .videoContainer .videoControlBar .videoBtnContainer {
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+}
+.allV .videoContainer .videoControlBar .voiceBtn {
+  margin-right: auto;
+  display: flex;
+}
+.allV .videoContainer .videoControlBar .voiceBtn .voiceBar {
+  flex: 10;
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  width: 100px;
+  height: 35px;
+  transition: height 0.3s;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 1rem;
+}
+.allV .videoContainer .videoControlBar .voiceBtn .voiceBar .voiceFill {
+  background: #e0e03b;
+  flex: 0;
+  flex-basis: 100%;
+}
+.allV .videoContainer .videoControlBar .videoSpeed {
+  background-color: white;
+  width: 82px;
+  height: 35px;
+  display: flex;
+  position: relative;
+  font-weight: 700;
+}
+.allV .videoContainer .videoControlBar .videoSpeed button {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.allV .videoContainer .videoControlBar .videoSpeed .videoSpeedList {
+  background-color: #6f717b;
+  height: 215px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 100%;
+  margin-bottom: 3rem;
+  display: none;
+}
+.allV .videoContainer .videoControlBar .videoSpeed .videoSpeedList ul {
+  list-style-type: none;
+  font-size: 1.3rem;
+}
+.allV .videoContainer .videoControlBar .videoSpeed .videoSpeedList li {
+  padding: 0.2rem 0;
+  width: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.allV .videoContainer .videoControlBar .videoSpeed .videoSpeedList li:hover {
+  background-color: #9d9faa;
+}
+.allV .videoContainer .videoControlBar .fullScreenBtn {
+  margin: 0 0 0 2rem;
+}
+.allV .classListContainer {
+  display: block;
+  background-color: #6f717b;
+  color: #9d9faa;
+  width: 21.8%;
+  font-size: 22px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.allV .classListContainer .classListHead {
+  height: 12.5%;
+  display: flex;
+  align-items: center;
+  margin-left: 19.22%;
+}
+.allV .classListContainer .classListChapter {
+  display: flex;
+  height: 12.5%;
+  outline: 1px solid #9d9faa;
+}
+.allV .classListContainer .classListChapter .expandSvg {
+  width: 19.22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.allV .classListContainer .classListChapter .classListChapterTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoContainer {
+  width: 83.33333%;
+  margin: 12vh auto;
+}
+.infoContainer .infoHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+}
+.infoContainer .infoHead .infoHeadTitle {
+  display: inline-block;
+  font-weight: 700;
+  color: #003dcb;
+}
+.infoContainer .infoHead .infoHeadPrice {
+  font-size: 32px;
+  font-weight: 700;
+  color: #e23965;
+  margin-left: auto;
+  padding: 0 6.5px 0 0;
+}
+.infoContainer .infoHead button {
+  height: 48px;
+  border-radius: 24px;
+  margin: 0 7.5px;
+  padding: 13px;
+  border: none;
+  padding: 1px 24px;
+  position: relative;
+  cursor: pointer;
+}
+.infoContainer .infoHead button span {
+  color: #ffffff;
+  font-size: 18px;
+  align-content: center;
+}
+.infoContainer .infoHead .infoHeadShopCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoContainer .infoHead .infoHeadShopCart button {
+  background-color: #003dcb;
+}
+.infoContainer .infoHead .infoHeadBuyNow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoContainer .infoHead .infoHeadBuyNow button {
+  background-color: #e23965;
+}
+.infoContainer .containerLine {
+  height: 6px;
+  background-color: #e23965;
+  margin-top: 6px;
+}
+.infoContainer .infoBtn {
+  margin-top: 5vh;
+  border-bottom: solid #6f717b;
+  width: 74%;
+  display: flex;
+}
+.infoContainer .infoBtn div {
+  display: flex;
+  width: 50%;
+}
+.infoContainer .infoBtn button {
+  display: flex;
+  color: #003dcb;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.infoContainer .infoBtn button span {
+  font-size: 32px;
+}
+.infoContainer .infoBtn button:focus {
+  box-shadow: 0 3px 0 #e23965;
+}
+
 .navLogOut #active {
   color: #4967ff;
   pointer-events: none;
