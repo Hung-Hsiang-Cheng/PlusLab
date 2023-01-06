@@ -8,12 +8,15 @@ const AddOrder = () => {
     let nowHr = now.getHours().toString().padStart(2, "0");
     let nowMinute = now.getMinutes().toString().padStart(2, "0");
     let nowSec = now.getSeconds().toString().padStart(2, "0");
+    let nowMonth = (now.getMonth() + 1).toString().padStart(2, "0");
+    let nowDate = now.getDate().toString().padStart(2, "0");
+
     let finalNow =
       now.getFullYear() +
       "-" +
-      now.getMonth() +
+      nowMonth +
       "-" +
-      now.getDate() +
+      nowDate +
       " " +
       nowHr +
       ":" +
@@ -38,26 +41,28 @@ const AddOrder = () => {
       </div>
 
       <form action="GET">
-        <label for="stockKey" className="test">
+        <label htmlFor="stockKey">
           <p className="pr12">股票代碼</p>
           <input
-            type="number"
+            type="text"
             required="required"
             name="stockKey"
             id="stockKey"
+            autoComplete="off"
           />
         </label>
-        <label for="stockName" className="test">
+        <label htmlFor="stockName">
           <p className="pr12">股票名稱</p>
           <input
             type="text"
             required="required"
             name="stockName"
             id="stockName"
+            autoComplete="off"
           />
         </label>
         <p>單價</p>
-        <label for="limitPrice">
+        <label htmlFor="limitPrice">
           <input
             type="radio"
             required="required"
@@ -66,9 +71,14 @@ const AddOrder = () => {
             className="radioButton"
           />
           <p className="pr7">限價</p>
-          <input type="number" name="priceType" id="limitPrice" />
+          <input
+            type="number"
+            name="priceType"
+            id="limitPrice"
+            autoComplete="off"
+          />
         </label>
-        <label for="MarketPrice">
+        <label htmlFor="MarketPrice">
           <input
             type="radio"
             required="required"
@@ -79,7 +89,7 @@ const AddOrder = () => {
           />
           <p className="pr7">市價</p>
         </label>
-        <label for="limitUpPrice">
+        <label htmlFor="limitUpPrice">
           <input
             type="radio"
             required="required"
@@ -90,7 +100,7 @@ const AddOrder = () => {
           />
           <p className="pr7">漲停</p>
         </label>
-        <label for="limitDownPrice">
+        <label htmlFor="limitDownPrice">
           <input
             type="radio"
             required="required"
@@ -101,7 +111,7 @@ const AddOrder = () => {
           />
           <p className="pr7">跌停</p>
         </label>
-        <label for="closingPrice">
+        <label htmlFor="closingPrice">
           <input
             type="radio"
             required="required"
@@ -112,7 +122,7 @@ const AddOrder = () => {
           />
           <p className="pr6">平盤</p>
         </label>
-        <label dataT="股" for="orderValue" className="orderValueLabel">
+        <label dataT="股" htmlFor="orderValue" className="orderValueLabel">
           <p className="pr12">交易單位</p>
 
           <input
@@ -120,10 +130,11 @@ const AddOrder = () => {
             required="required"
             name="orderValue"
             id="orderValue"
+            autoComplete="off"
           />
         </label>
         <div className="agreeArea">
-          <label for="agree">
+          <label htmlFor="agree">
             <input
               type="checkbox"
               required="required"
