@@ -45,75 +45,44 @@ body {
 .dCartContainer {
   width: 70%;
   padding-left: 70px;
-
   .cartcompos {
     display: flex;
-    flex-direction: column;
-  
-    hr {
-      color: $primaryLightest;
-      width: 100%;
-    }
-    .tabletitle {
-        color: $primaryLightestest;
-        display: flex;
-        flex-direction: row;
-        font-size:18px;
-        text-align: center;
-        padding: 5px 0;
-      >div:nth-child(1){
-        width: 8.07%;
-      }
-      >div:nth-child(2){
-        width: 18%;;
-      }
-      >div:nth-child(3){
-        width:34%;
-      }
-      >div:nth-child(4),>div:nth-child(5){
-        width:14.307%;
-      }
-     >div:nth-child(6){
-        width:11.314%;
-      }
-    }
-
+    flex-direction: row;
+    
   }
-  .dcartPageTitle {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    .dCartTitle {
-      font: {
-        weight: 700;
-        size: 30px;
-      }
-      padding: 5px 0;
-      border-bottom: 6px solid $red;
-      line-height: 48px;
-      letter-spacing: 0.15em;
+    .dcartPageTitle {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .dCartTitle {
+        font: {
+          weight: 700;
+          size: 30px;
+        }
+        padding: 5px 0;
+        border-bottom: 6px solid $red;
+        line-height: 48px;
+        letter-spacing: 0.15em;
 
-      color: $blue;
-      span {
-        svg {
-          path {
-            fill: $redDarker;
-          }
+        color: $blue;
+        span {
+          svg {
+            path {
+              fill: $redDarker;
+            }
+          
         }
       }
     }
   }
 }
 .dCartList {
-  
-  li label {
-    
+  li {
+    margin: 5px 0;
     height: 100px;
-    width: fit-content;
     display: flex;
     flex-direction: row;
     padding: 10px 0;
-    align-items: center;
-
+  
     input {
       margin: 30px;
       width: 20px;
@@ -138,16 +107,13 @@ body {
     }
 
     .dCartitem {
-      display: flex;
-      flex-direction: column;
-      padding: 5px 15px;
       .dCartTiltle {
-        
+        padding: 20px 15px 0 15px;
         font: {
           weight: 700;
           size: 20px;
         }
-        line-height: 1.5;
+        line-height: 36px;
         letter-spacing: 0.1em;
         color: $blue;
         transition: all 0.3s;
@@ -164,7 +130,7 @@ body {
         line-height: 33px;
         letter-spacing: 0.1em;
         color: $white;
-        
+        padding-left: 15px;
       }
     }
 
@@ -340,176 +306,6 @@ body {
     }
     &:hover {
       background-color: $blueLighter;
-    }
-  }
-}
-.dCollectlist {
-  justify-content: center;
-
-  list-style-type: none;
-  .slick-dots {
-    bottom: -80px;
-
-    li {
-      margin: 25px;
-      button::before {
-        content: "  ";
-        background-color: $pramaryDarker;
-        width: 60px;
-        height: 15px;
-        border-radius: 2px;
-      }
-    }
-    .slick-active {
-      button::before {
-        background-color: $blue;
-      }
-    }
-  }
-  a:hover > .slick-prev,
-  .slick-next {
-    z-index: 100;
-  }
-  .slick-arrow {
-    right: 0px;
-  }
-  .slick-track {
-    width: 100%;
-  }
-  .slick-prev:before {
-    content: url(../components/CoursePage/img/toleft.svg);
-    left: -30px;
-    top: -10px;
-    position: absolute;
-    opacity: 0.35;
-    transition: all 0.8s;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .slick-next:before {
-    content: url(../components/CoursePage/img/toright.svg);
-    right: -60px;
-    top: -10px;
-    position: absolute;
-    opacity: 0.35;
-    transition: all 0.8s;
-  }
-  .dCard {
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 18px;
-    width: 280px;
-    display: flex;
-    position: relative;
-    height: fit-content;
-    flex-direction: column;
-    transition: all 0.1s ease-in-out;
-    color: $primaryLightestest;
-    border: 2px solid transparent;
-
-    &:hover {
-      border: 2px solid $primaryLightestest;
-      -webkit-box-shadow: 0px 0px 0px 1px #a0a0a0,
-        inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
-      box-shadow: 0px 0px 0px 1px #a0a0a0,
-        inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
-    }
-    > div:hover {
-      filter: saturate(3);
-    }
-    .dCardScore {
-      justify-content: baseline;
-      span {
-        display: inline-flex;
-      }
-    }
-    .dCardStar {
-      color: $redDarker;
-      padding: 0 5px;
-    }
-    .dCardStarActive {
-      path {
-        fill: $primaryLightestest;
-      }
-    }
-
-    .sOnStar {
-      path {
-        fill: $yellow;
-      }
-    }
-    .dCardTitle {
-      color: $blue;
-      font: {
-        weight: 700;
-        size: 22px;
-      }
-      line-height: 33px;
-      letter-spacing: 0.1em;
-    }
-    .imgCard {
-      object-fit: contain;
-      position: relative;
-      width: 100%;
-    }
-    .shopCart {
-      position: absolute;
-      top: 130px;
-      right: 10px;
-      padding: 5px;
-      display: flex;
-      float: right;
-      font-size: 25px;
-      z-index: 300;
-      color: $red;
-    }
-    .dCardMark {
-      position: absolute;
-      top: 130px;
-      left: 10px;
-      font-size: 25px;
-      padding: 5px;
-      color: $red;
-      z-index: 300;
-    }
-    .dCardTeacher {
-      color: $primary;
-      font: {
-        weight: 400;
-        size: 16px;
-      }
-      line-height: 33px;
-      /* identical to box height, or 206% */
-
-      letter-spacing: 0.05em;
-    }
-    .dCardtext {
-      padding: 10px;
-      background-color: $white;
-      position: relative;
-      height: 100%;
-      border-bottom: 8px solid #e23965;
-      align-items: center;
-      height: 200px;
-    }
-    .dCardPrice {
-      font: {
-        weight: 600;
-        size: 22px;
-      }
-      justify-content: center;
-      line-height: 33px;
-      letter-spacing: 0.1em;
-      color: $red;
-      float: right;
-      position: relative;
-      top: -20px;
-    }
-    svg {
-      path {
-        padding: 0 3px;
-      }
     }
   }
 }

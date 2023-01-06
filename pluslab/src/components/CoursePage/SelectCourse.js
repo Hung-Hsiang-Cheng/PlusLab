@@ -98,10 +98,10 @@ const State = {
     <Fragment>
       <div className="divAllCourse">
         <ul className="ulAllCourseContainer">
-          {State.SelectCourse.map((v) => {
+          {State.SelectCourse.map((v,i) => {
             return (
               <a href="/">
-                <li className="dCard" key={v.id}>
+                <li className="dCard" key={i}>
                   <img className="imgCard" src={v.img} />
                   <div className="shopCart">
                     <svg
