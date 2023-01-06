@@ -1,5 +1,5 @@
 footer {
-  background-color: $pramaryDarker;
+  background-color: $primaryDarker;
   width: 100%;
   height: 192px;
   display: flex;
@@ -20,15 +20,15 @@ footer {
         fill: $primaryLighter;
         cursor: pointer;
       }
-      &:hover {
+      &:hover path {
         fill: $primaryLightest;
       }
     }
     padding-right: 9vw;
-    :first-child {
+    :first-child svg {
       padding-right: 24px;
     }
-    :last-child {
+    :last-child svg {
       padding-left: 24px;
     }
   }

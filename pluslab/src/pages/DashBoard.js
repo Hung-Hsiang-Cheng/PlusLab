@@ -1,10 +1,14 @@
 import React from "react";
-
+import Top from "../components/Top";
+import DashboardMain from "../components/Dashboard/DashboardMain";
+import DashBoardBottom from "../components/Dashboard/DashboardBottom";
 const DashBoard = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <>
+      <DashboardMain />
+      <DashBoardBottom />
+      <Top />
+    </>
   );
 };
 export default DashBoard;

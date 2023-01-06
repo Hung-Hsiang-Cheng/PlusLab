@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./components/Nav";
+import NavLogOut from "./components/NavLogOut";
 import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import DashBoard from "./pages/DashBoard";
@@ -9,7 +10,9 @@ import OrderHistory from "./pages/OrderHistory";
 // import "./styles/orderhistory.css";
 import "./styles/cartpage.css";
 import "./styles/style.css";
+import VideoPage from "./pages/VideoPage";
 import { Routes, Route } from "react-router-dom";
+import "./styles/style.css";
 
 function App() {
   return (
@@ -21,6 +24,7 @@ function App() {
         <Route path="/Coursepage" element={<Coursepage />} />
         <Route path="/Coursepage/OrderHistory" element={<OrderHistory />} />
         <Route path="/Coursepage/Cartpage" element={<Cartpage />} />
+        <Route path="/video" element={<VideoPage />} />
       </Routes>
       <Footer />
     </div>
