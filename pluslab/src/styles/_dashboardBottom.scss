@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 36px;
+  top: 12px;
   h3 {
     display: inline;
     color: $blue;
@@ -21,13 +21,13 @@
   }
   .dashboardBottomRow1,
   .dashboardBottomRow2 {
-    width: 81vw;
+    width: 81.15vw;
     display: flex;
     justify-content: space-between;
     background-color: $primary;
     .addOrder,
     .nowOrder {
-      margin-top: 32px;
+      margin-top: 36px;
       padding: 32px;
       width: 696px;
       height: 328px;
@@ -222,7 +222,7 @@
     }
     .nowTotal,
     .orderHistory {
-      margin-top: 32px;
+      margin-top: 36px;
       padding: 32px;
       width: 696px;
       height: 426px;
@@ -321,6 +321,7 @@
           }
         }
       }
+
       tr > td:nth-child(1) {
         width: 45px;
       }
@@ -402,26 +403,24 @@
       th {
         svg {
           padding-left: 4px;
-          path {
-            fill: gold;
-          }
         }
       }
     }
+
     tr > th:nth-child(1) {
-      width: 181px;
+      width: 199px;
       text-align: left;
     }
     tr > th:nth-child(2) {
-      width: 207px;
-      text-align: left;
+      width: 184px;
+      text-align: right;
     }
     tr > th:nth-child(3) {
-      width: 156px;
+      width: 183px;
       text-align: right;
     }
     tr > th:nth-child(4) {
-      width: 220px;
+      width: 198px;
       text-align: right;
       svg {
         margin-right: 26px;
@@ -446,7 +445,7 @@
     &::-webkit-scrollbar-thumb {
       background-color: $primaryLightest;
     }
-    .nowOrderList {
+    .nowTotalList {
       position: relative;
       top: -2px;
       border: none;
@@ -456,15 +455,6 @@
         border-top: solid 2px $primaryLightest;
         height: 70px;
         td {
-          .cancelButton {
-            cursor: pointer;
-            path {
-              fill: $primaryLightestest;
-            }
-            &:hover path {
-              fill: $white;
-            }
-          }
           span {
             color: $primaryLightestest;
             letter-spacing: 0.1em;
@@ -472,17 +462,19 @@
         }
       }
       tr > td:nth-child(1) {
-        width: 45px;
+        width: 193px;
       }
       tr > td:nth-child(2) {
-        width: 130px;
+        width: 176px;
+        text-align: right;
         p {
           position: relative;
-          top: -4px;
+          top: -2px;
         }
       }
       tr > td:nth-child(3) {
-        width: 218px;
+        width: 176px;
+        text-align: right;
         p {
           position: relative;
           top: -2px;
@@ -491,10 +483,163 @@
       tr > td:nth-child(4) {
         width: 168px;
         text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
       }
-      tr > td:nth-child(5) {
-        width: 156px;
+    }
+  }
+}
+
+.orderHistory {
+  .titleBox {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+    border-bottom: solid 2px $primaryLightest;
+  }
+  .orderHistoryBox {
+    height: 116px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .pr12 {
+      padding-right: 12px;
+    }
+    select {
+      width: 11.2vw;
+    }
+    input {
+      width: 11.2vw;
+    }
+    #orderTime {
+      width: 11vw;
+      height: 40px;
+      background-color: $primaryLightest;
+      color: $white;
+      font-size: 22px;
+      padding-left: 8px;
+      border: none;
+      letter-spacing: 0.1em;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+    #stockName {
+      width: 11vw;
+      height: 40px;
+      background-color: $primaryLightest;
+      color: $white;
+      font-size: 22px;
+      padding-left: 8px;
+      border: none;
+      letter-spacing: 0.1em;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+  .orderHistoryTitle {
+    height: 40px;
+    border-top: solid 2px $primaryLightest;
+    border-bottom: solid 2px $primaryLightest;
+    border-collapse: collapse;
+    width: 100%;
+
+    p {
+      display: inline-block;
+      padding-bottom: 2px;
+      color: $primaryLightestest;
+    }
+
+    tr > th:nth-child(1) {
+      width: 182px;
+      text-align: left;
+    }
+    tr > th:nth-child(2) {
+      width: 202px;
+      text-align: left;
+    }
+    tr > th:nth-child(3) {
+      width: 172px;
+      text-align: right;
+    }
+    tr > th:nth-child(4) {
+      width: 208px;
+      text-align: right;
+      p {
+        padding-right: 22px;
+      }
+    }
+  }
+
+  .orderHistoryListBox {
+    width: 100%;
+    height: 214px;
+    overflow-y: auto;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      position: relative;
+      top: 12px;
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background: $primary;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primaryLightest;
+    }
+    .orderHistoryList {
+      position: relative;
+      top: -2px;
+      border: none;
+      border-collapse: collapse;
+      width: 674px;
+      tr {
+        border-top: solid 2px $primaryLightest;
+        height: 70px;
+      }
+      tr > td:nth-child(1) {
+        width: 173px;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+      tr > td:nth-child(2) {
+        width: 196px;
+        text-align: left;
+        p {
+          position: relative;
+          top: -2px;
+        }
+        span {
+          color: $primaryLightestest;
+          letter-spacing: 0.1em;
+        }
+      }
+      tr > td:nth-child(3) {
+        width: 167px;
         text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
+      }
+      tr > td:nth-child(4) {
+        width: 177px;
+        text-align: right;
+        p {
+          position: relative;
+          top: -2px;
+        }
       }
     }
   }
