@@ -18,7 +18,7 @@ const Cartpage = () => {
       key: 2,
       title: "我收藏的課程",
       iconPath: collectCourse,
-      compos: Marks,
+      compos: Mark,
     },
   ];
 
