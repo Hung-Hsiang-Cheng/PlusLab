@@ -155,7 +155,7 @@ const Nav = () => {
           />
         </svg>
       </Link>
-      <Link to="/" onClick={colorShoppingCart} id={`${idShoppingCart}`}>
+      <Link to="/Coursepage/Cartpage" onClick={colorShoppingCart} id={`${idShoppingCart}`}>
         <svg
           className="shoppingCart"
           width="24"
