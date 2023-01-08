@@ -168,8 +168,8 @@ const RecentClass = () => {
         <Slider {...settings2}>
           {State.NewCourse.map((v) => {
             return (
-              <a href="/">
-                <li className="dCard" key={v.id}>
+              <Link to="/" key={v.id}>
+                <li className="dCard">
                   <img className="imgCard" src={v.img} />
                   <div className="shopCart">
                     <svg
@@ -253,7 +253,7 @@ const RecentClass = () => {
                     <div className="dCardPrice">NT$ {v.special}</div>
                   </div>
                 </li>
-              </a>
+              </Link>
             );
           })}
         </Slider>

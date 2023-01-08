@@ -1,35 +1,29 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
-import OrderDetail from "../CartPage/OrderDetail";
+
+import HistoryList from "../orderhistory/HistoryList";
 const OrderMod = () => {
   const State = {
     titles: [
+    
       {
         id: 1,
-        title: " ",
-      },
-      {
-        id: 2,
         title: "縮圖",
       },
       {
-        id: 3,
+        id: 2,
         title: "標題/作者",
       },
 
       {
-        id: 4,
+        id: 3,
         title: "原價",
       },
 
       {
-        id: 5,
-        title: "特價",
-      },
-      {
-        id: 6,
-        title: "刪除",
-      },
+        id: 4,
+        title: "購買價格",
+      }
     ],
   };
 
@@ -43,7 +37,9 @@ const OrderMod = () => {
         </div>
         <hr />
       </div>
-       <OrderDetail />
+      <ul className="dCartList">
+        <HistoryList />
+      </ul>
     </Fragment>
   );
 };

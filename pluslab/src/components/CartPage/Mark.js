@@ -112,8 +112,8 @@ const Mark = () => {
       <Slider {...settings}>
         {State.mark.map((r) => {
           return (
-            <Link to="">
-              <li className="dCard" key={r.id}>
+            <Link to="" key={r.id}>
+              <li className="dCard">
                 <img className="imgCard" src={r.img} />
                 <div className="shopCart">
                   <svg

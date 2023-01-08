@@ -51,6 +51,16 @@ const PopCourse = () => {
     autoplay: true,
     autoplaySpeed: 2000,
   };
+
+
+
+
+
+
+
+
+
+  
   return (
     <div className="dHotCarousel">
       <Slider {...settings}>

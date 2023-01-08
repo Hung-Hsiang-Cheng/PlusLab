@@ -39,24 +39,9 @@ body {
   background-color: $primary;
 }
 
-.dTop {
-  svg {
-    border-radius: 50%;
-    position: fixed;
-    z-index: 200;
-    bottom: 10px;
-    right: 10px;
-    path {
-      transition: all 0.3s;
-      fill: $white;
-      opacity: 0.3;
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
+.headersss{
+  height: 90px;
 }
-
 .divSale {
   background-color: $greenDarker;
   height: 100%;
@@ -521,10 +506,7 @@ body {
     box-shadow: 0px 0px 0px 1px #a0a0a0,
       inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
   }
-  > img:hover,
-  > div:hover {
-    filter: saturate(3);
-  }
+  
   .dCardScore {
     justify-content: baseline;
     span {

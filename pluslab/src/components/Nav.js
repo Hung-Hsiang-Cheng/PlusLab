@@ -129,7 +129,7 @@ const Nav = () => {
       <Link to="/dashboard" onClick={colorDashboard} id={`${idDashboard}`}>
         交易模擬器
       </Link>
-      <Link to="/" onClick={colorCourse} id={`${idCourse}`}>
+      <Link to="/Coursepage" onClick={colorCourse} id={`${idCourse}`}>
         課程列表
       </Link>
       <Link to="/" onClick={colorMycourse} id={`${idMycourse}`}>
@@ -155,7 +155,11 @@ const Nav = () => {
           />
         </svg>
       </Link>
-      <Link to="/Coursepage/Cartpage" onClick={colorShoppingCart} id={`${idShoppingCart}`}>
+      <Link
+        to="/Coursepage/Cartpage"
+        onClick={colorShoppingCart}
+        id={`${idShoppingCart}`}
+      >
         <svg
           className="shoppingCart"
           width="24"

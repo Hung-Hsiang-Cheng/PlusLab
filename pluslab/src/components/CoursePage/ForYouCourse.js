@@ -10,6 +10,7 @@ const ForYouCourse = (props) => {
   const State = {
     ToYou: [
       {
+        id: 1,
         img: "https://picsum.photos/500/300",
         url: "https://picsum.photos/500/300",
         title: "新手必學的3件事 - 進場點、停損點、停利點",
@@ -21,6 +22,7 @@ const ForYouCourse = (props) => {
         videLength: 2.5,
       },
       {
+        id: 2,
         img: "https://picsum.photos/500/300",
         url: "https://picsum.photos/500/300",
         title: "新手必學的3件事 - 進場點、停損點、停利點",
@@ -32,6 +34,7 @@ const ForYouCourse = (props) => {
         videLength: 2.5,
       },
       {
+        id: 3,
         img: "https://picsum.photos/500/300",
         url: "https://picsum.photos/500/300",
         title: "新手必學的3件事 - 進場點、停損點、停利點",
@@ -44,6 +47,7 @@ const ForYouCourse = (props) => {
         videLength: 2.5,
       },
       {
+        id: 4,
         img: "https://picsum.photos/500/300",
         url: "https://picsum.photos/500/300",
         title: "新手必學的3件事 - 進場點、停損點、停利點",

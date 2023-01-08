@@ -41,6 +41,8 @@ const Coursepage = () => {
   
     return (
       <Fragment>
+        <div className="headersss"></div>
+
         <Couponbar />
         {title.map((t) => {
           return (
