@@ -42,7 +42,7 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        // transform: translateY(100%) translateY(-5px);
+        transform: translateY(100%) translateY(-5px);
         transition: all .3s;
         flex-wrap: wrap;
         background: rgba(0,0,0,0.1);
@@ -128,52 +128,71 @@
               }
             }
           }
-
-          
         }  
         .fullScreenBtn{
           margin: 0 1rem 0 1rem;
         }
-
       }
     }
 
     .classListContainer {
-      display: block;
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
       background-color: $primaryLightest;
       color: $primaryLightestest;
       width: 21.8%;
       font-size: 22px;
       overflow-x: hidden;
       overflow-y: auto;
-
-      
       .classListHead{
         height: 12.5%;
         display: flex;
         align-items: center;
         margin-left: 19.22%;
       }
-      .classListChapter{
+      .classListBody{
         display: flex;
-        height: 12.5%;
-        outline: 1px solid $primaryLightestest;
-        
-        
-        .expandSvg{
-          width: 19.22%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        flex-direction: column;
+        height: 87.5%;
+        .classListChapter{
+          outline: 1px solid $primaryLightestest;
+          // height: 100%;// //這裡會讓ul暴版
+          .titleContainer{
+            display: flex;
+            outline: 1px solid $primaryLightestest;
+            height: 89px;
+            .expandSvg{
+              width: 19.22%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: transform 3s linear;
+            }
+            .title{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: transform 3s linear;
+            }
+          }
         }
-        .classListChapterTag{
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        ul{
+          list-style-type: none;
+          
+          li{
+            height: 89px;
+            padding-left: 19.22%;
+            display: flex;
+            align-items: center;
+            outline: 1px solid $primaryLightestest;
+            // justify-content: center;
+          }
         }
 
       }
     }
+    
   }
 
   .infoContainer {

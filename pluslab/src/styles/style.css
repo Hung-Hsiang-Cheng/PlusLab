@@ -1562,6 +1562,7 @@ footer .contactIconBox :last-child svg {
   position: absolute;
   bottom: 0;
   width: 100%;
+  transform: translateY(100%) translateY(-5px);
   transition: all 0.3s;
   flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.1);
@@ -1645,7 +1646,9 @@ footer .contactIconBox :last-child svg {
   margin: 0 1rem 0 1rem;
 }
 .allV .classListContainer {
-  display: block;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
   background-color: #6f717b;
   color: #9d9faa;
   width: 21.8%;
@@ -1659,21 +1662,41 @@ footer .contactIconBox :last-child svg {
   align-items: center;
   margin-left: 19.22%;
 }
-.allV .classListContainer .classListChapter {
+.allV .classListContainer .classListBody {
   display: flex;
-  height: 12.5%;
+  flex-direction: column;
+  height: 87.5%;
+}
+.allV .classListContainer .classListBody .classListChapter {
   outline: 1px solid #9d9faa;
 }
-.allV .classListContainer .classListChapter .expandSvg {
+.allV .classListContainer .classListBody .classListChapter .titleContainer {
+  display: flex;
+  outline: 1px solid #9d9faa;
+  height: 89px;
+}
+.allV .classListContainer .classListBody .classListChapter .titleContainer .expandSvg {
   width: 19.22%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 3s linear;
 }
-.allV .classListContainer .classListChapter .classListChapterTag {
+.allV .classListContainer .classListBody .classListChapter .titleContainer .title {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 3s linear;
+}
+.allV .classListContainer .classListBody ul {
+  list-style-type: none;
+}
+.allV .classListContainer .classListBody ul li {
+  height: 89px;
+  padding-left: 19.22%;
+  display: flex;
+  align-items: center;
+  outline: 1px solid #9d9faa;
 }
 
 .infoContainer {
