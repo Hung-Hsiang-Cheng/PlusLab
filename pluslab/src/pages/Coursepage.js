@@ -41,6 +41,7 @@ const Coursepage = () => {
   
     return (
       <Fragment>
+        {/* <Helmet><title>課程列表</title> </Helmet> */}
         <div className="headersss"></div>
 
         <Couponbar />
@@ -48,7 +49,8 @@ const Coursepage = () => {
           return (
             <Fragment key={t.key}>
               <div className={t.clsNam.join(" ")}>
-                <span>{t.title}</span>
+                
+                  <span>{t.title}</span>
               </div>
               <t.compos />
             </Fragment>

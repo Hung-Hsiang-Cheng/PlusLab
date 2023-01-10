@@ -100,18 +100,15 @@ const HistoryList = () => {
             <Fragment key={v.id}>
               <li>
                 <img src="https://picsum.photos/250/150" alt="" />
-                <div className="dHistoryListItem">
+                <div className="dOrderHistoryListItem">
                   <Link to="/">
-                    <div className="dCartTiltle">
-                      {v.title}
-                    </div>
+                    <div className="dOrderHistoryTiltle">{v.title}</div>
                   </Link>
-                  <div className="dCartTeacher">{v.teacher}</div>
+                  <div className="dOrderHistoryTeacher">{v.teacher}</div>
                 </div>
-      
-                  <div className="dOldPrice">NT$ {v.orignprice}</div>
-                  <div className="dSpecailPrice">NT$ {v.special}</div>
-              
+
+                <div className="dHistoryOldPrice">NT$ {v.orignprice}</div>
+                <div className="dHistorySpecailPrice">NT$ {v.special}</div>
               </li>
               <div className="dHr">
                 <hr />

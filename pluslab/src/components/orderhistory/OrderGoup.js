@@ -37,7 +37,7 @@ const OrderMod = () => {
         </div>
         <hr />
       </div>
-      <ul className="dCartList">
+      <ul className="dOrderHistoryList">
         <HistoryList />
       </ul>
     </Fragment>

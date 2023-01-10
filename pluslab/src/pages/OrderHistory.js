@@ -23,14 +23,14 @@ const OrderHistory = () => {
 
       {title.map((t) => {
         return (
-          <div className="dCartContainer" key={t.key}>
-            <div className="dcartPageTitle">
-              <span className="dCartTitle">
+          <div className="dOrderHistoryContainer" key={t.key}>
+            <div className="dOrderHistoryTitle">
+              <span className="dOrderHistoryTitle">
                 {t.title}
                 <img src={t.iconPath} />
               </span>
             </div>
-            <div className="cartcompos">
+            <div className="OrderHistorycompos">
               <t.compos />
             </div>
           </div>

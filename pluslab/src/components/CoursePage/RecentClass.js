@@ -20,6 +20,7 @@ const RecentClass = () => {
         students: 752,
         videLength: 2.5,
         teacher: "王希律",
+        tag:"",
       },
       {
         id: 2,
@@ -162,6 +163,13 @@ const RecentClass = () => {
     ],
   };
 
+  const handleMouseOver = (index) => {
+    document.getElementById(index).style.filter = "saturate(2)";
+  
+  };
+  const handleMouseOut = (index) => {
+   document.getElementById(index).style.filter = "";
+  };
   return (
     <div className="divNEW">
       <ul className="ulNewContainer">
@@ -169,7 +177,9 @@ const RecentClass = () => {
           {State.NewCourse.map((v) => {
             return (
               <Link to="/" key={v.id}>
-                <li className="dCard">
+                <li
+                  className="dCard"
+                >
                   <img className="imgCard" src={v.img} />
                   <div className="shopCart">
                     <svg

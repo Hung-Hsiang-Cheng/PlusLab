@@ -35,18 +35,23 @@ $white: #ffffff;
   // outline: red solid 0.1px;
 }
 
+.badgecart {
+  background-color: $red;
+}
+
 body {
   background-color: $primary;
 }
 
-.headersss{
+.headersss {
   height: 90px;
 }
 .divSale {
   background-color: $greenDarker;
-  height: 100%;
-  display: flex;
 
+  height: 90px;
+  display: flex;
+  position: relative;
   font: {
     weight: 700;
     size: 20px;
@@ -54,7 +59,7 @@ body {
   line-height: 24px;
   letter-spacing: 0.15em;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   padding: 8px 0px;
   color: $white;
   span {
@@ -95,7 +100,8 @@ body {
   }
 }
 .divText {
-  height: 150px;
+  position: relative;
+  top: -40px;
   background-color: $primary;
   color: $blue;
   text-align: center;
@@ -115,118 +121,139 @@ body {
   width: 100%;
   padding: 0 5px;
   box-sizing: border-box;
-  &:active,
-  &:hover,
-  &:focus {
-    outline: none;
-    border: none;
-  }
-  .card {
-    width: 100%;
-    height: 450px;
-    border-radius: 5px;
-    overflow: hidden;
+  // &:active,
+  // &:hover,
+  // &:focus {
+  //   outline: none;
+  //   border: none;
+}
+.card {
+  width: 100%;
+  height: 450px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
 
-    position: relative;
-
-    .cardImg {
-      position: absolute;
-      top: 0px;
+  .cardImg {
+    position: absolute;
+    top: 0px;
+    width: 198%;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    background-color: $pramaryDarker;
+    transition: 0.5s;
+    img {
       width: 100%;
-      left: 0;
       height: 100%;
-      z-index: 2;
-      background-color: $pramaryDarker;
+      object-fit: cover;
+    }
+  }
+
+  &:hover {
+    img {
+      opacity: 0.8;
       transition: 0.5s;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
     }
-
-    &:hover {
-      img {
-        opacity: 0.4;
-        transition: 0.5s;
-      }
-      .cardImg {
-        transform: translateY(-100px);
-        transition: all 0.9s;
-      }
+    .cardImg {
+      transform: translateY(-100px);
+      transition: all 0.9s;
     }
-    ul {
-      text-align: center;
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 3;
-      display: flex;
-      li {
-        list-style: none;
+  }
+  ul {
+    position: relative;
+    // transform: translate(-50%, -50%);
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    transition: all 0.6s;
+    justify-content: center;
+    justify-self: center;
+    li {
+      position: absolute;
+      top: 40%;
 
-        a {
-          position: relative;
-
-          margin: 0 auto;
-          width: 50px;
-          height: 50px;
-          line-height: 50px;
-          text-align: center;
-          background-color: $white;
-          font-size: 23px;
-          color: $pramaryDarker;
-          font-weight: bold;
-          margin: 0 6px;
-          transition: 0.4s;
-          transform: translateY(200px);
-          opacity: 0;
-          span {
-            color: rgba(0, 0, 0, 0);
-            text-decoration: none;
+      a {
+        align-self: center;
+        position: relative;
+        span {
+          height: 100%;
+          z-index: 200;
+          svg {
+            width: 100px;
+            path {
+              fill: $red;
+            }
           }
         }
       }
     }
-    .titletxt {
-      position: absolute;
-      bottom: 400px;
-      left: 0;
-      bottom: 0;
-      background: $white;
-      width: 100%;
-      height: 40px;
-      z-index: 2;
-      padding: 10px;
-      transition: 0.6s;
-      text-align: center;
-      font-size: 30px;
-    }
   }
-
-  .card:hover {
-    ul li a span {
-      transform: translateY(0px);
-      color: $pramaryDarker;
-    }
-    .titletxt {
-      bottom: 0;
-      height: 100px;
-    }
+  .titletxt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $blueLighter;
+    color: $white;
+    width: 100%;
+    height: 80px;
+    z-index: 2;
+    padding: 10px;
+    transition: 0.6s;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
   }
-
-  ul li Link button {
-    font-size: 50px;
-    width: 100px;
+  .text {
+    position: absolute;
+    display: none;
+    bottom: -100px;
+    padding: 50px;
+    left: 0;
+    width: 100%;
     height: 30px;
-    transition: 0.8s;
-    &:hover {
-      transform: rotate(360deg);
-      background-color: $white;
-    }
+    z-index: 3;
+    padding: 10px;
+    transition: 3s;
+    text-align: center;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $blueDarker;
   }
 }
+
+.card:hover {
+  ul {
+    z-index: 200;
+  }
+  ul li a span {
+    transform: translateY(500px);
+  }
+  .titletxt {
+    bottom: 0;
+    height: 100px;
+  }
+  > .text {
+    display: block;
+    bottom: 0;
+    height: 50px;
+    transform: translateY(-10px);
+  }
+}
+
+ul li Link button {
+  font-size: 50px;
+  width: 100px;
+  height: 30px;
+  transition: 0.8s;
+  &:hover {
+    transform: rotate(360deg);
+    background-color: $white;
+  }
+}
+
 .dHotCarousel {
   .slick-dots {
     bottom: -80px;
@@ -338,37 +365,47 @@ body {
   .divItems {
     background-color: $white;
     width: 80%;
+    height: 300px;
     margin: 0 auto;
     display: flex;
     border-bottom: 10px solid $red;
     .imgClass {
-      float: left;
       img {
         height: 100%;
       }
     }
   }
   .dClasstext {
-    float: right;
+    position: relative;
     padding: 30px;
+
     color: $primaryLightestest;
-    .sStar {
-      color: $redDarker;
-    }
+  
     .score {
-      padding: 3px px;
+      font-size: 20px;
+    
       span {
-        padding: 0 3px;
-        vertical-align: middle;
+        padding: 0 5px;
+        vertical-align: baseline;
       }
       .sPersonCount,
       .sClock {
         float: right;
+        vertical-align: baseline;
       }
       .sOnStar {
         path {
           fill: $yellow;
         }
+      }
+      .sStar {
+      color: $redDarker;
+      font-size: 20px;
+    
+    }
+      .starspan {
+        padding: 1px;
+        vertical-align: baseline;
       }
     }
     h5 {
@@ -378,17 +415,19 @@ body {
       color: $blue;
       font: {
         weight: 700;
-        size: 32px;
+        size: 28px;
       }
     }
     p {
       padding: 10px;
     }
     .dClassPrice {
+      position: absolute;
+      bottom: 15px;
+      right: 50px;
       line-height: 50px;
       letter-spacing: 0.1em;
       color: $red;
-      text-align: center;
 
       font: {
         weight: 600;
@@ -418,7 +457,7 @@ body {
   background: $primary;
   .ulNewContainer {
     width: 90%;
-    height: calc(400 * 3);
+    height: 450px;
 
     margin: 0 auto;
     list-style-type: none;
@@ -462,7 +501,7 @@ body {
     }
     .slick-next:before {
       content: url(../components/CoursePage/img/toright.svg);
-      right: -60px;
+      right: -50px;
       top: -10px;
       position: absolute;
       opacity: 0.35;
@@ -472,12 +511,13 @@ body {
 }
 .divAllCourse {
   margin: 10px;
-  padding: 100px;
+
   background: $primary;
   .ulAllCourseContainer {
     display: flex;
     flex-wrap: wrap;
     column-gap: 10px;
+
     row-gap: 10px;
     width: 90%;
     justify-content: center;
@@ -488,7 +528,7 @@ body {
 }
 .dCard {
   text-decoration: none;
-  list-style-type: none;
+
   font-size: 18px;
   width: 280px;
   display: flex;
@@ -506,7 +546,7 @@ body {
     box-shadow: 0px 0px 0px 1px #a0a0a0,
       inset 0px 0px 21px 7px rgba(255, 255, 255, 0.35);
   }
-  
+
   .dCardScore {
     justify-content: baseline;
     span {
@@ -549,7 +589,7 @@ body {
     display: flex;
     float: right;
     font-size: 25px;
-    z-index: 300;
+    z-index: 8;
     color: $red;
   }
   .dCardMark {

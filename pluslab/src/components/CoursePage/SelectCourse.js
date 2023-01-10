@@ -1,37 +1,74 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, useReducer } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import logger from "use-reducer-logger";
+
 import StarScore from "./StarScore";
-import data from "./data";
+// import data from "./data";
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "FETCH_REQUENT":
+      return { ...state, loading: true };
+    case "FETCH_SUCCESS":
+      return { ...state, SelectCourse: action.payload, loading: false };
+    case "FETCH_FAIL":
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 
 const SelectCourse = () => {
-
-
-const [Saturate, setSaturate] = useState(false);
-
-const handleMouseOver = (e) => {setSaturate(true);}
-const handleMouseOut = (e) => {
-  setSaturate(false);
-}
   
+    const [{ loading, error, SelectCourse }, dispatch] = useReducer(
+      logger(reducer),
+      {
+        SelectCourse: [],
+        loading: true,
+        error: "",
+      }
+    );
+  
+  // const [SelectCourse, setSelectCourse] = useState([]);
 
+  
+  const handleMouseOver = (index) => {
+    document.getElementById(index).style.filter = "saturate(2)";
+  };
+  const handleMouseOut = (index) => {
+   document.getElementById(index).style.filter = "";
+  };
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch({ type: "FETCH_REQUENT" });
+      try {
+        const result = await axios.get("/api/allCourse");
+        dispatch({ type: "FETCH_SUCCESS", payload: result.data });
+      } catch (err) {
+        dispatch({ type: "FETCH_FAIL", payload: err.message });
+      }
+      // setSelectCourse(result.data);
+    };
+    fetchData();
+  }, []);
 
   return (
     <Fragment>
       <div className="divAllCourse">
         <ul className="ulAllCourseContainer">
-          {data.SelectCourse.map((v,i) => {
+      {
+        loading ? (<div>loading...</div>
+        ):error ? (<div>{error}</div>
+        ):( SelectCourse.map((v, i) => {
             return (
               <Link to="/" key={v.id}>
                 <li
                   className="dCard"
-                  onMouseOver={handleMouseOver}
-                  onMouseOut={handleMouseOut}
+                  id={i}
+                  onMouseOver={() => handleMouseOver(i)}
+                  onMouseOut={() => handleMouseOut(i)}
                 >
-                  <img
-                    className="imgCard"
-                    src={v.img}
-                    style={{ filter: Saturate ? "saturate(2)" : "" }}
-                  />
+                  <img className="imgCard" src={v.img} />
                   <div className="shopCart">
                     <svg
                       width="28"
@@ -61,10 +98,7 @@ const handleMouseOut = (e) => {
                     </svg>
                   </div>
 
-                  <div
-                    className="dCardtext"
-                    style={{ filter: Saturate ? "saturate(2)" : "" }}
-                  >
+                  <div className="dCardtext">
                     <div className="dCardScore">
                       <span className="dCardStar">{v.star}</span>
                       <span>
@@ -119,7 +153,7 @@ const handleMouseOut = (e) => {
                 </li>
               </Link>
             );
-          })}
+          }))}
         </ul>
       </div>
       <div className="dCardMore">

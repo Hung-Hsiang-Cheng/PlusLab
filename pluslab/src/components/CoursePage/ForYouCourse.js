@@ -88,7 +88,7 @@ const ForYouCourse = (props) => {
       <Slider {...settings}>
         {State.ToYou.map((t) => {
           return (
-            <Fragment key={t.id}>
+            <Link to="/" key={t.id}>
               <div className="divItems">
                 <div className="imgClass">
                   <img src={t.img} />
@@ -100,9 +100,9 @@ const ForYouCourse = (props) => {
                     <span>({t.ratecount})</span>
                     <span className="sPersonCount">
                       <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
+                        width="23"
+                        height="23"
+                        viewBox="0 -2 18 18"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -117,13 +117,13 @@ const ForYouCourse = (props) => {
                           fill="#9d9faa"
                         />
                       </svg>
-                      {t.students} 人
+                          {t.students} 人
                     </span>
                     <span className="sClock">
                       <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
+                        width="23"
+                        height="23"
+                        viewBox="0 -2 18 18"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -151,7 +151,7 @@ const ForYouCourse = (props) => {
                   </div>
                 </div>
               </div>
-            </Fragment>
+            </Link>
           );
         })}
       </Slider>

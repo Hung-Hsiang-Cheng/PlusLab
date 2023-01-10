@@ -19,12 +19,12 @@ const StarScore = (props) => {
      <Fragment>
        {starBox.map((v, i) => {
          return (
-           <span key={i}>
+           <span className="starspan" key={i}>
              <svg
                className={starBox[i]}
-               width="18"
-               height="18"
-               viewBox="0 0 18 16"
+               width="22"
+               height="22"
+               viewBox="0 0 18 12"
                fill="none"
                xmlns="http://www.w3.org/2000/svg"
              >
