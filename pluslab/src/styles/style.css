@@ -666,7 +666,7 @@ footer .contactIconBox :last-child svg {
   height: 63px;
 }
 .dashboardMain .mainBox .collectionStock .collectionStockTitle input {
-  width: 220px;
+  width: 240px;
   background-color: #1d1f27;
   border-radius: 20px;
   height: 40px;
@@ -687,6 +687,9 @@ footer .contactIconBox :last-child svg {
   fill: #2f3137;
 }
 .dashboardMain .mainBox .collectionStock .collectionStockTitle .collection .collectionBackground:hover {
+  fill: #e23965;
+}
+.dashboardMain .mainBox .collectionStock .collectionStockTitle #selected {
   fill: #e23965;
 }
 .dashboardMain .mainBox .collectionStock .collectionStockListBox {
@@ -825,17 +828,17 @@ footer .contactIconBox :last-child svg {
   border: none;
   border-collapse: collapse;
 }
-.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(4) {
-  width: 875px;
+.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(1) {
+  width: 107px;
 }
 .dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(2) {
   width: 30px;
 }
-.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(4) {
-  width: 875px;
+.dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(3) {
+  width: 141px;
 }
 .dashboardMain .mainBox .mainStock .stockTab table tr > td:nth-child(4) {
-  width: 875px;
+  width: 864px;
 }
 .dashboardMain .mainBox .mainStock .stockTab table tr {
   border-bottom: solid 2px #9d9faa;
@@ -850,26 +853,193 @@ footer .contactIconBox :last-child svg {
   padding-bottom: 6px;
   cursor: pointer;
 }
-.dashboardMain .mainBox .mainStock .tabKChart .googleChart {
+.dashboardMain .mainBox .mainStock .tabKChart .chartBox {
   position: relative;
-  top: 22px;
+  top: 12px;
 }
 .dashboardMain .mainBox .mainStock .tabKChart .nowPrice {
   position: relative;
-  width: 300px;
-  top: -310px;
-  left: 800px;
+  width: 340px;
+  top: -324px;
+  left: 796px;
   border-collapse: collapse;
-  border: solid 1px gold;
+  z-index: 3;
 }
 .dashboardMain .mainBox .mainStock .tabKChart .nowPrice tr {
-  height: 40px;
+  height: 44px;
+  border-bottom: none;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tbody > tr:nth-child(1) {
+  height: 50px;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tbody > tr:nth-child(7) {
+  height: 50px;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tr > td:nth-child(1) {
+  width: 85px;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tr > td:nth-child(2) {
+  width: 77px;
+  text-align: right;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tr > td:nth-child(3) {
+  width: 16px;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tr > td:nth-child(4) {
+  width: 77px;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .nowPrice tr > td:nth-child(5) {
+  width: 85px;
+  text-align: right;
 }
 .dashboardMain .mainBox .mainStock .tabKChart .nowPrice p {
   color: #ffffff;
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 0.15em;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .bBackground {
+  width: 170px;
+  height: 220px;
+  background-color: #00b114;
+  opacity: 0.3;
+  position: relative;
+  top: -594px;
+  left: 796px;
+  z-index: 1;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .b0 {
+  height: 44px;
+  background-color: #1d1f27;
+  position: relative;
+  top: -814px;
+  left: 796px;
+  z-index: 2;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .b1 {
+  height: 44px;
+  background-color: #1d1f27;
+  position: relative;
+  top: -814px;
+  left: 796px;
+  z-index: 2;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .b2 {
+  height: 44px;
+  background-color: #1d1f27;
+  position: relative;
+  top: -814px;
+  left: 796px;
+  z-index: 2;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .b3 {
+  height: 44px;
+  background-color: #1d1f27;
+  position: relative;
+  top: -814px;
+  left: 796px;
+  z-index: 2;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .b4 {
+  height: 44px;
+  background-color: #1d1f27;
+  position: relative;
+  top: -814px;
+  left: 796px;
+  z-index: 2;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .a0 {
+  height: 44px;
+  background-color: #aa003b;
+  opacity: 0.3;
+  position: relative;
+  top: -1033px;
+  left: 966px;
+  z-index: 1;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .a1 {
+  height: 44px;
+  background-color: #aa003b;
+  opacity: 0.3;
+  position: relative;
+  top: -1033px;
+  left: 966px;
+  z-index: 1;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .a2 {
+  height: 44px;
+  background-color: #aa003b;
+  opacity: 0.3;
+  position: relative;
+  top: -1033px;
+  left: 966px;
+  z-index: 1;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .a3 {
+  height: 44px;
+  background-color: #aa003b;
+  opacity: 0.3;
+  position: relative;
+  top: -1033px;
+  left: 966px;
+  z-index: 1;
+}
+.dashboardMain .mainBox .mainStock .tabKChart .a4 {
+  height: 44px;
+  background-color: #aa003b;
+  opacity: 0.3;
+  position: relative;
+  top: -1033px;
+  left: 966px;
+  z-index: 1;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo {
+  width: 1142px;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo tr {
+  height: 64px;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo tr > td:nth-child(1) {
+  width: 160px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  text-align: center;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo tr > td:nth-child(2) {
+  width: 411px;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  text-align: left;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo tr > td:nth-child(2) p {
+  padding-left: 12px;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo tr > td:nth-child(3) {
+  width: 160px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  text-align: center;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo tr > td:nth-child(4) {
+  width: 411px;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  text-align: left;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo tr > td:nth-child(4) p {
+  padding-left: 12px;
+}
+.dashboardMain .mainBox .mainStock .tabInfo .stockBasicInfo td {
+  border: solid 2px #6f717b;
+  overflow: hidden;
 }
 
 .dashboardBottom {
@@ -965,7 +1135,7 @@ footer .contactIconBox :last-child svg {
 .dashboardBottom .dashboardBottomRow1 .addOrder #limitPrice,
 .dashboardBottom .dashboardBottomRow2 .addOrder #limitPrice {
   margin-top: 16px;
-  width: 9.6vw;
+  width: 9.55vw;
   height: 40px;
   background-color: #6f717b;
   color: #ffffff;
@@ -1514,6 +1684,159 @@ footer .contactIconBox :last-child svg {
 .orderHistory .orderHistoryListBox .orderHistoryList tr > td:nth-child(4) p {
   position: relative;
   top: -2px;
+}
+
+.profileTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profileTop .profileTitleBox {
+  width: 81vw;
+  padding-top: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profileTop .profileTitleBox .profileContainer {
+  display: flex;
+  align-items: center;
+}
+.profileTop .profileTitleBox .profileContainer .profilePic {
+  width: 126px;
+  height: 126px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 63px;
+}
+.profileTop .profileTitleBox .profileContainer .titleContainer {
+  padding-left: 36px;
+}
+.profileTop .profileTitleBox .profileContainer .titleContainer h1 {
+  display: inline-block;
+  color: #9d9faa;
+  font-weight: 500;
+  font-size: 40px;
+  letter-spacing: 0.15em;
+}
+.profileTop .profileTitleBox .profileContainer .titleContainer span {
+  padding-left: 16px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #4967ff;
+  letter-spacing: 0.1em;
+}
+.profileTop .profileTitleBox .profileContainer .titleContainer h2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 48px;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+}
+.profileTop .profileTitleBox .buttonBox {
+  display: flex;
+}
+.profileTop .profileTitleBox .buttonBox .goToBackStage {
+  display: flex;
+  align-items: center;
+  background-color: #e23965;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  padding: 14px 26px 16px 26px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.profileTop .profileTitleBox .buttonBox .goToBackStage:hover {
+  background-color: #aa003b;
+}
+.profileTop .profileTitleBox .buttonBox .goToBackStage img:nth-child(1) {
+  height: 18px;
+  width: 18px;
+  padding: 1px 8px 0px 2px;
+}
+.profileTop .profileTitleBox .buttonBox .goToBackStage img:nth-child(2) {
+  height: 18px;
+  width: 18px;
+  padding: 1px 0px 0px 8px;
+}
+.profileTop .profileTitleBox .buttonBox .changeInfo {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  background-color: #4967ff;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  padding: 14px 26px 16px 26px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.profileTop .profileTitleBox .buttonBox .changeInfo:hover {
+  background-color: #003dcb;
+}
+
+.profileStockCollection,
+.profileOwnCourse,
+.profileCourseCollection,
+.profileArticleCollection {
+  min-height: 700px;
+}
+.profileStockCollection table,
+.profileOwnCourse table,
+.profileCourseCollection table,
+.profileArticleCollection table {
+  width: 1565px;
+  border: none;
+  border-collapse: collapse;
+  margin: 40px 9vw 0 9vw;
+}
+.profileStockCollection table tr > td:nth-child(2),
+.profileOwnCourse table tr > td:nth-child(2),
+.profileCourseCollection table tr > td:nth-child(2),
+.profileArticleCollection table tr > td:nth-child(2) {
+  width: 30px;
+}
+.profileStockCollection table tr > td:nth-child(4),
+.profileOwnCourse table tr > td:nth-child(4),
+.profileCourseCollection table tr > td:nth-child(4),
+.profileArticleCollection table tr > td:nth-child(4) {
+  width: 30px;
+}
+.profileStockCollection table tr > td:nth-child(6),
+.profileOwnCourse table tr > td:nth-child(6),
+.profileCourseCollection table tr > td:nth-child(6),
+.profileArticleCollection table tr > td:nth-child(6) {
+  width: 30px;
+}
+.profileStockCollection table tr,
+.profileOwnCourse table tr,
+.profileCourseCollection table tr,
+.profileArticleCollection table tr {
+  border-bottom: solid 2px #9d9faa;
+  height: 54px;
+}
+.profileStockCollection table tr td,
+.profileOwnCourse table tr td,
+.profileCourseCollection table tr td,
+.profileArticleCollection table tr td {
+  display: inline-block;
+}
+.profileStockCollection table h2,
+.profileOwnCourse table h2,
+.profileCourseCollection table h2,
+.profileArticleCollection table h2 {
+  font-weight: 600;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  color: #4967ff;
+  padding-bottom: 6px;
+  cursor: pointer;
 }
 
 .navLogOut #active {

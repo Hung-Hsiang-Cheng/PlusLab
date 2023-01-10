@@ -20,7 +20,7 @@
         justify-content: start;
         height: 63px;
         input {
-          width: 220px;
+          width: 240px;
           background-color: $primary;
           border-radius: 20px;
           height: 40px;
@@ -42,6 +42,9 @@
           &:hover {
             fill: $red;
           }
+        }
+        #selected {
+          fill: $red;
         }
       }
       .collectionStockListBox {
@@ -186,18 +189,18 @@
           margin-top: 12px;
           border: none;
           border-collapse: collapse;
-          tr > td:nth-child(4) {
-            width: 875px;
+          tr > td:nth-child(1) {
+            width: 107px;
           }
           tr > td:nth-child(2) {
             width: 30px;
           }
 
-          tr > td:nth-child(4) {
-            width: 875px;
+          tr > td:nth-child(3) {
+            width: 141px;
           }
           tr > td:nth-child(4) {
-            width: 875px;
+            width: 864px;
           }
           tr {
             border-bottom: solid 2px $primaryLightestest;
@@ -215,25 +218,195 @@
         }
       }
       .tabKChart {
-        .googleChart {
+        .chartBox {
           position: relative;
-          top: 22px;
+          top: 12px;
         }
         .nowPrice {
           position: relative;
-          width: 300px;
-          top: -310px;
-          left: 800px;
+          width: 340px;
+          top: -324px;
+          left: 796px;
           border-collapse: collapse;
-          border: solid 1px gold;
+          z-index: 3;
           tr {
-            height: 40px;
+            height: 44px;
+            border-bottom: none;
+          }
+          tbody > tr:nth-child(1) {
+            height: 50px;
+          }
+          tbody > tr:nth-child(7) {
+            height: 50px;
+          }
+
+          tr > td:nth-child(1) {
+            width: 85px;
+          }
+          tr > td:nth-child(2) {
+            width: 77px;
+            text-align: right;
+          }
+          tr > td:nth-child(3) {
+            width: 16px;
+          }
+          tr > td:nth-child(4) {
+            width: 77px;
+          }
+          tr > td:nth-child(5) {
+            width: 85px;
+            text-align: right;
           }
           p {
             color: $white;
             font-weight: 300;
             font-size: 18px;
             letter-spacing: 0.15em;
+          }
+        }
+        .bBackground {
+          width: 170px;
+          height: 220px;
+          background-color: $greenDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -594px;
+          left: 796px;
+          z-index: 1;
+        }
+        .b0 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b1 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b2 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b3 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b4 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .a0 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a1 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a2 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a3 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a4 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+      }
+      .tabInfo {
+        .stockBasicInfo {
+          width: 1142px;
+          tr {
+            height: 64px;
+          }
+          tr > td:nth-child(1) {
+            width: 160px;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: center;
+          }
+          tr > td:nth-child(2) {
+            width: 411px;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: left;
+            p {
+              padding-left: 12px;
+            }
+          }
+          tr > td:nth-child(3) {
+            width: 160px;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: center;
+          }
+          tr > td:nth-child(4) {
+            width: 411px;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: left;
+            p {
+              padding-left: 12px;
+            }
+          }
+          td {
+            border: solid 2px $primaryLightest;
+            overflow: hidden;
           }
         }
       }

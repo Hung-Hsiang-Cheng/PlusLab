@@ -114,6 +114,7 @@ const Nav = () => {
   };
 
   useEffect(() => {
+    n = window.location.href.split("/")[3];
     colorActive();
   }, []);
 
@@ -132,10 +133,14 @@ const Nav = () => {
       <Link to="/" onClick={colorCourse} id={`${idCourse}`}>
         課程列表
       </Link>
-      <Link to="/" onClick={colorMycourse} id={`${idMycourse}`}>
+      <Link
+        to="/profile/ownCourse"
+        onClick={colorMycourse}
+        id={`${idMycourse}`}
+      >
         我的課程
       </Link>
-      <Link to="/" onClick={colorMyCollection} id={`${idmyCollection}`}>
+      <Link to="/profile" onClick={colorMyCollection} id={`${idmyCollection}`}>
         <svg
           className="collection"
           width="20"
@@ -178,7 +183,9 @@ const Nav = () => {
         </svg>
       </Link>
       <div className="profilePic">
-        <img src={profilePic} alt="" onClick={colorNone} />
+        <Link to="/profile">
+          <img src={profilePic} alt="" onClick={colorNone} />
+        </Link>
         <div>
           <div className="mouth"></div>
           <ul className="dropDown">
@@ -190,7 +197,7 @@ const Nav = () => {
                 </div>
               </li>
             </Link>
-            <Link to="/" onClick={colorNone}>
+            <Link to="/profile" onClick={colorNone}>
               <li>
                 <div className="listbox">
                   <img src={profile} alt="" />

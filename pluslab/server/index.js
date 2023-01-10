@@ -53,4 +53,4 @@ const getStockApi = () => {
 };
 
 getStockApi();
-setInterval(getStockApi, 120000);
+setInterval(getStockApi, 300000);

@@ -55,6 +55,7 @@ const NavLogOut = () => {
   };
 
   useEffect(() => {
+    n = window.location.href.split("/")[3];
     colorActive();
   }, []);
 
