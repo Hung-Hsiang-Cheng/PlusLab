@@ -141,9 +141,9 @@ const VideoInterface = () => {
   const stopPic = () => {
     switch (VideoEle) {
       case false:
-        return (<img src={play} />)
+        return (<img src={play} alt="" />)
       case true:
-        return (<img src={stop} />)
+        return (<img src={stop} alt="" />)
       default:
         break;
     }
@@ -152,9 +152,9 @@ const VideoInterface = () => {
   const fullScreenPic = () => {
     switch (fullScreenEle) {
       case false:
-        return (<img src={fullScreen} />)
+        return (<img src={fullScreen} alt="" />)
       case true:
-        return (<img src={smallScreen} />)
+        return (<img src={smallScreen} alt="" />)
       default:
         break;
     }
@@ -172,7 +172,7 @@ const VideoInterface = () => {
         </div>
         <div className="videoBtnContainer">
           <button onClick={videoReverse}>
-            <img src={videoback} />
+            <img src={videoback} alt="" />
           </button>
         </div>
         <div className="videoBtnContainer">
@@ -182,12 +182,12 @@ const VideoInterface = () => {
         </div>
         <div className="videoBtnContainer">
           <button onClick={videoForward}>
-            <img src={videoforward} />
+            <img src={videoforward} alt="" />
           </button>
         </div>
         <div className="videoBtnContainer voiceBtn">
           <button>
-            <img src={voice} />
+            <img src={voice} alt="" />
           </button>
           <div className="voiceBar" ref={voiceBarRef}>
             <div className="voiceFill" ref={voiceFillRef}></div>

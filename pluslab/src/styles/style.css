@@ -662,7 +662,7 @@ footer .contactIconBox :last-child svg {
 .dashboardMain .mainBox .collectionStock .collectionStockTitle {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   height: 63px;
 }
 .dashboardMain .mainBox .collectionStock .collectionStockTitle input {

@@ -1,26 +1,20 @@
 import React from "react";
-// import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const InfoTabs = () => {
-
-  // const [toggleState, setToggleState] = useState(1);
-
-  // const toggleTab = (index) => {
-  //   setToggleState(index);
-  // };
   return (
     <div className="infoBtn">
       <div>
-        <button type="button"><span>課程介紹</span></button>
+        <Link to="/video/intro"><button type="button" ><span>課程介紹</span></button></Link>
       </div>
       <div>
-        <button type="button"><span>課程公告</span></button>
+        <Link to="/video/announcement"><button type="button" ><span>課程公告</span></button></Link>
       </div>
       <div>
-        <button type="button"><span>問與答</span></button>
+        <Link to="/video/question"><button type="button" ><span>問與答</span></button></Link>
       </div>
       <div>
-        <button type="button"><span>評論</span></button>
+        <Link to="/video/comment"><button type="button" ><span>評論</span></button></Link>
       </div>
     </div>
   )
