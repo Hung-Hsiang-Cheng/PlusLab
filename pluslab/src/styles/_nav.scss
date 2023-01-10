@@ -1,3 +1,32 @@
+$pramaryDarker: #000000;
+$primary: #1d1f27;
+$primaryLighter: #44464f;
+$primaryLightest: #6f717b;
+$primaryLightestest: #9d9faa;
+
+$blueDarker: #003dcb;
+$blue: #4967ff;
+$blueLighter: #8895ff;
+
+$greenDarker: #00b114;
+$green: #38e54d;
+
+$redDarker: #aa003b;
+$red: #e23965;
+
+$yellow: #e0e03b;
+
+$white: #ffffff;
+
+@font-face {
+  font-family: "interRegular";
+  src: url(./font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "interBold";
+  src: url(./font/Inter-Bold.ttf);
+}
+
 nav {
   position: fixed;
   z-index: 5;
@@ -80,6 +109,7 @@ nav {
           color: $white;
           font-size: 18px;
           letter-spacing: 0.15em;
+          
         }
         img {
           width: 22px;
@@ -113,4 +143,31 @@ nav {
   .profilePic:hover .mouth {
     display: block;
   }
+
+
+// write cart number
+  .cartNumber{
+    position:absolute;
+    background-color:$red;
+    width: 22px;
+    height: 23px;
+    color: $white;
+    border-radius: 20px;
+    font-size:3pt;
+    text-align: center;
+    line-height: 25px;
+   top:-10px;
+   left:2px;
+   z-index: -1;
+  
+}
+a{
+  position: relative;
+}
+
+ #active>div{
+ 
+ background-color: $redDarker;
+
+}
 }

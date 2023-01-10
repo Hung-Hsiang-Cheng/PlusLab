@@ -37,6 +37,14 @@ body {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "interRegular";
+  src: url(./font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: "interBold";
+  src: url(./font/Inter-Bold.ttf);
+}
 nav {
   position: fixed;
   z-index: 5;
@@ -49,7 +57,7 @@ nav {
   padding: 0 9vw 0 9vw;
 }
 nav input {
-  background-color: #2f3137;
+  background-color: #44464f;
   width: 27vw;
   height: 48px;
   padding: 0 0 0 56px;
@@ -151,6 +159,26 @@ nav .profilePic:hover .dropDown,
 nav .profilePic:hover .mouth {
   display: block;
 }
+nav .cartNumber {
+  position: absolute;
+  background-color: #e23965;
+  width: 22px;
+  height: 23px;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 3pt;
+  text-align: center;
+  line-height: 25px;
+  top: -10px;
+  left: 2px;
+  z-index: -1;
+}
+nav a {
+  position: relative;
+}
+nav #active > div {
+  background-color: #aa003b;
+}
 
 .navLogOut {
   position: fixed;
@@ -164,7 +192,7 @@ nav .profilePic:hover .mouth {
   padding: 0 9vw 0 9vw;
 }
 .navLogOut input {
-  background-color: #2f3137;
+  background-color: #44464f;
   width: 36.3vw;
   height: 48px;
   padding: 0 0 0 56px;
@@ -219,7 +247,7 @@ footer {
   align-items: center;
 }
 footer p {
-  color: #2f3137;
+  color: #44464f;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.15em;
@@ -231,7 +259,7 @@ footer .contactIconBox {
   padding-right: 9vw;
 }
 footer .contactIconBox svg path {
-  fill: #2f3137;
+  fill: #44464f;
   cursor: pointer;
 }
 footer .contactIconBox svg:hover path {
@@ -801,8 +829,8 @@ ul li Link button:hover {
   position: relative;
   top: -20px;
 }
-.dCard svg path {
-  padding: 0 3px;
+.dCard .dCardClock {
+  align-items: baseline;
 }
 
 .dCardMore {

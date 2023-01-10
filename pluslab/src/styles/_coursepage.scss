@@ -634,11 +634,9 @@ ul li Link button {
     position: relative;
     top: -20px;
   }
-  svg {
-    path {
-      padding: 0 3px;
-    }
-  }
+.dCardClock{
+  align-items: baseline;
+}
 }
 .dCardMore {
   width: 100%;
