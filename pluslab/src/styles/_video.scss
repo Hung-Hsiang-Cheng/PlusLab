@@ -42,7 +42,7 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        transform: translateY(100%) translateY(-5px);
+        // transform: translateY(100%) translateY(-5px);
         transition: all .3s;
         flex-wrap: wrap;
         background: rgba(0,0,0,0.1);
@@ -66,6 +66,18 @@
           margin: 0 0.2rem;
           padding: 0.5rem;
           // display: flex;
+        }
+        .videoTime{
+          color: white;
+          padding: 0 0.4rem;
+          font-size: 1.3rem;
+          width: 10%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          // span{
+          //   width: 100%;
+          // }
         }
         .voiceBtn{
           margin-right: auto;
@@ -198,6 +210,7 @@
   .infoContainer {
     width: 83.33333%;
     margin: 12vh auto;
+    position: relative;
 
     .infoHead {
       display: flex;
@@ -274,12 +287,16 @@
       border-bottom: solid $primaryLightest;
       width: 74%;
       display: flex;
-
+      text-decoration:none ;
+      
       div {
         display: flex;
         width: 50%;
+        a{
+          text-decoration: none;
+        }
       }
-
+      
       button {
         display: flex;
         color: $blueDarker;
@@ -292,6 +309,95 @@
       }
       button:focus {
         box-shadow: 0 3px 0 $red;
+      }
+    }
+
+    .introContainer{
+      width: 74%;
+      div{
+        img{
+          margin: 5vh 11.3%;
+        }
+      }
+      .introText{
+        margin: 5vh 11.3%;
+        font-size: 20px;
+        line-height: 33px;
+        color: white;
+        pre{
+          white-space: pre-wrap;
+        }
+      }
+    }
+    .questionAnswerContainer{
+      width: 74%;
+      .questionAnswerBox{
+        width: 76%;
+        margin: 5vh 11.3%;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        .videoCurrentTime{
+          width: 10%;
+          font-size: 20px;
+          cursor: pointer;
+          border: none;
+          border-radius: 40px;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 20px;
+          font-weight: 600;
+
+        }
+        .textArea{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          textarea{
+            min-height: 112px;
+            padding: 20px;
+            font-size: 20px;
+            border:6px solid $primaryLightestest;
+          }
+          .textAreaBtn{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+            .cancelBtn{
+              cursor: pointer;
+              font-size: 16px;
+              color: white;
+              background: transparent;
+              height: 34px;
+              border: none;
+              font-weight: bold;
+              padding: 0px 16px;
+            }
+            .saveBtn{
+              cursor: pointer;
+              font-size: 16px;
+              height: 34px;
+              padding: 0px 16px;
+              border: none;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .questionAnswerBtn{
+        width: 76%;
+        margin: 5vh 11.3%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        height: 112px;
+        color: $primaryLightestest;
+        border: 6px solid $primaryLightestest;
+        font-size: 20px;
+        padding: 0 16px;
       }
     }
 

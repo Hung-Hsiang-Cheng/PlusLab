@@ -7,8 +7,10 @@ import smallScreen from './image/smallScreen.svg';
 import videoback from './image/videoback.svg';
 import videoforward from './image/videoforward.svg';
 import voice from './image/voice.svg';
+import voiceMute from './image/voiceMute.svg';
 
-const VideoInterface = () => {
+
+const VideoInterface = ({ getCurrentTime }) => {
   const videoSelf = videoo;
   const videoContainerRef = useRef(null);
   const videoRef = useRef(null);
@@ -24,77 +26,73 @@ const VideoInterface = () => {
   const [className, setClassName] = useState('videoControlBar');
   const [speed, setSpeed] = useState('1')
   const [speedBtn, setSpeedBtn] = useState(false)
-  // 滑鼠移動增加className
+  const [videoDurationTime, setVideoDurationTime] = useState(null);
+  const [currentTime, setCurrentTime] = useState('00:00');
+
   useEffect(() => {
+    // // 滑鼠移動增加className
     const handleMouseMove = () => {
       setClassName(`${className} hover`);
     };
-    document.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
-  // // 大於三秒沒有偵測到移動滑鼠時取消 hover 效果
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      // setIsHovering(false);
-      setClassName(className.replace(' hover', ''));
-    }, 5000);
-
-    // 在組件卸載時清除 timeout
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [className]);
-
-  // // 捕捉影片時間渲染時間進度條
-  useEffect(() => {
+    // // 捕捉影片時間渲染時間進度條
     const handleProgress = () => {
       const percent = (videoRef.current.currentTime / videoRef.current.duration) * 100;
       progressBarRef.current.style.flexBasis = `${percent}%`;
     }
-    videoRef.current.addEventListener('timeupdate', handleProgress);
-    return () => {
-      videoRef.current.removeEventListener('timeupdate', handleProgress);
-    };
-  }, [])
 
-  // // 點擊時間進度調控制影片進度
-  useEffect(() => {
-    const scrub = (e) => {
-      const scrubTime = (e.offsetX / progressRef.current.offsetWidth) * videoRef.current.duration;
-      videoRef.current.currentTime = scrubTime;
-    }
-    progressRef.current.addEventListener('click', scrub);
-    return () => {
-      progressRef.current.removeEventListener('click', scrub);
-    };
-  }, [progressRef, videoRef])
-
-  // // 捕捉聲音渲染音量進度條
-  useEffect(() => {
+    // // 捕捉聲音渲染音量進度條
     const handleVolume = () => {
       const percent = (videoRef.current.volume / 1) * 100;
       voiceFillRef.current.style.flexBasis = `${percent}%`;
     }
-    videoRef.current.addEventListener('volumechange', handleVolume);
-    return () => {
-      videoRef.current.removeEventListener('volumechange', handleVolume);
-    };
-  }, [])
-  // 點擊音量Bar控制音量
-  useEffect(() => {
+
+    // 點擊音量Bar控制音量
     const voiceScrub = (e) => {
       const scrubV = (e.offsetX / voiceBarRef.current.offsetWidth);
       videoRef.current.volume = scrubV;
     }
-    voiceBarRef.current.addEventListener('click', voiceScrub);
-    return () => {
-      voiceBarRef.current.removeEventListener('click', voiceScrub);
-    };
-  }, [])
 
+    // 設定影片時間顯示
+    const handleDurationChange = () => {
+      const duration = videoRef.current.duration;
+      const minutes = new Date(duration * 1000).getUTCMinutes();
+      const seconds = new Date(duration * 1000).getUTCSeconds();
+      setVideoDurationTime(`${minutes}:${seconds}`);
+    }
+    const handleCurrentTime = () => {
+      const current = videoRef.current.currentTime;
+      const currentMinutes = new Date(current * 1000).getUTCMinutes().toString().padStart(2, '0');
+      const currentSeconds = new Date(current * 1000).getUTCSeconds().toString().padStart(2, '0');
+      setCurrentTime(`${currentMinutes}:${currentSeconds} `);
+      getCurrentTime(`${currentMinutes}:${currentSeconds} `); //傳到問與答做使用
+    }
+    // // 點擊時間進度調控制影片進度
+    const scrub = (e) => {
+      const scrubTime = (e.offsetX / progressRef.current.offsetWidth) * videoRef.current.duration;
+      videoRef.current.currentTime = scrubTime;
+    }
+
+
+    document.addEventListener('mousemove', handleMouseMove);
+    videoRef.current.addEventListener('timeupdate', handleProgress);
+    videoRef.current.addEventListener('volumechange', handleVolume);
+    voiceBarRef.current.addEventListener('click', voiceScrub);
+    videoRef.current.addEventListener('loadedmetadata', handleDurationChange);
+    videoRef.current.addEventListener('timeupdate', handleCurrentTime);
+    progressRef.current.addEventListener('click', scrub);
+  }, []);
+
+  // // 大於三秒沒有偵測到移動滑鼠時取消hover效果
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setClassName(className.replace(' hover', ''));
+    }, 5000);
+
+    // 在組件卸載時清除timeout
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [className]);
 
   // 影片暫停與播放 
   const playToggle = () => {
@@ -130,13 +128,13 @@ const VideoInterface = () => {
       setSpeedBtn(false);
       showSpeedListRef.current.style.display = 'none';
     }
-    console.log(e.target);
   }
   // 點擊切換影片速度
   const toggleVideoSpeed = (e) => {
     setSpeed(e.target.value / 100);
     videoRef.current.playbackRate = parseFloat(e.target.value) / 100;
   }
+
 
   const stopPic = () => {
     switch (VideoEle) {
@@ -185,6 +183,9 @@ const VideoInterface = () => {
             <img src={videoforward} alt="" />
           </button>
         </div>
+        <div className="videoTime">
+          <span>{currentTime}</span> <span>/</span> <span>{videoDurationTime}</span>
+        </div>
         <div className="videoBtnContainer voiceBtn">
           <button>
             <img src={voice} alt="" />
@@ -211,8 +212,6 @@ const VideoInterface = () => {
             {fullScreenPic()}
           </button>
         </div>
-
-
       </div>
     </div>
   )
