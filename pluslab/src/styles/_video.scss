@@ -75,9 +75,9 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          // span{
-          //   width: 100%;
-          // }
+          .currentTimeSpace{
+            width: 50px;
+          }
         }
         .voiceBtn{
           margin-right: auto;
@@ -398,6 +398,50 @@
         border: 6px solid $primaryLightestest;
         font-size: 20px;
         padding: 0 16px;
+      }
+      .questionAnswerList{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 30px;
+        .questionBox{
+          margin: 5vh 11.3%;
+          display: flex;
+          gap: 15px;
+          align-items: flex-start;
+          font-size: 20px;
+          color:white;
+
+          .videoCurrentTime{
+            width: 10%;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 40px;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 20px;
+            font-weight: 600;
+          }
+          .questionAnswerContent{
+            padding: 15px;
+            width: 100%;
+            background-color: $primaryLightestest;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .questionAnswerContentDel{
+              display: flex;
+              align-self: flex-end;
+              gap: 10px;
+              button{
+                background-color: $primaryLightestest;
+                border: none;
+                cursor: pointer;
+              }
+            }
+          }
+        }
       }
     }
 

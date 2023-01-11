@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import addQuestion from './image/addQuestion.svg';
+import trashcan from './image/trashcan.svg';
 
-const QuestionAnswer = ({ b }) => {
+const QuestionAnswer = ({ b, videoRefProps, setVideoEleP }) => {
   const [question, setQuestion] = useState("");
   const [showQuestionAnswerBtn, setShowQuestionAnswerBtn] = useState(true);
   const [showQuestionAnswerBox, setShowQuestionAnswerBox] = useState(false);
 
 
+
+
   const handleQuestionAnswerBtnClick = () => {
     setShowQuestionAnswerBtn(false);
     setShowQuestionAnswerBox(true);
+    console.log(setVideoEleP);
+
+    videoRefProps.current.pause();
+
   }
+
+
 
   const handleCancelBtnClick = () => {
     setShowQuestionAnswerBox(false);
@@ -43,16 +52,25 @@ const QuestionAnswer = ({ b }) => {
         </div>
       )}
       {showQuestionAnswerBtn && (
-        <button className="questionAnswerBtn" onClick={handleQuestionAnswerBtnClick}>
+        <button className="questionAnswerBtn" onClick={handleQuestionAnswerBtnClick} >
           Create a new note at {b}
           <img src={addQuestion} alt="" />
         </button>
       )}
 
 
-      <div className="QuestionAnswerList">
-
-        <div>{question}</div>
+      <div className="questionAnswerList">
+        <div className='questionBox'>
+          <button className="videoCurrentTime">{b}</button>
+          <div className='questionAnswerContent'>
+            <div className='questionAnswerContentDel'>
+              <button>
+                <img src={trashcan} alt="" />
+              </button>
+            </div>
+            {question}
+          </div>
+        </div>
       </div>
 
 

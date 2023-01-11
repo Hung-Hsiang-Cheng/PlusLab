@@ -1593,6 +1593,9 @@ footer .contactIconBox :last-child svg {
   align-items: center;
   justify-content: space-between;
 }
+.allV .videoContainer .videoControlBar .videoTime .currentTimeSpace {
+  width: 50px;
+}
 .allV .videoContainer .videoControlBar .voiceBtn {
   margin-right: auto;
   display: flex;
@@ -1879,6 +1882,49 @@ footer .contactIconBox :last-child svg {
   border: 6px solid #9d9faa;
   font-size: 20px;
   padding: 0 16px;
+}
+.infoContainer .questionAnswerContainer .questionAnswerList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 30px;
+}
+.infoContainer .questionAnswerContainer .questionAnswerList .questionBox {
+  margin: 5vh 11.3%;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  font-size: 20px;
+  color: white;
+}
+.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .videoCurrentTime {
+  width: 10%;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  font-weight: 600;
+}
+.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .questionAnswerContent {
+  padding: 15px;
+  width: 100%;
+  background-color: #9d9faa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .questionAnswerContent .questionAnswerContentDel {
+  display: flex;
+  align-self: flex-end;
+  gap: 10px;
+}
+.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .questionAnswerContent .questionAnswerContentDel button {
+  background-color: #9d9faa;
+  border: none;
+  cursor: pointer;
 }
 
 .navLogOut #active {

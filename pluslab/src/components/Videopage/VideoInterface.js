@@ -7,10 +7,10 @@ import smallScreen from './image/smallScreen.svg';
 import videoback from './image/videoback.svg';
 import videoforward from './image/videoforward.svg';
 import voice from './image/voice.svg';
-import voiceMute from './image/voiceMute.svg';
+// import voiceMute from './image/voiceMute.svg';
 
 
-const VideoInterface = ({ getCurrentTime }) => {
+const VideoInterface = ({ getCurrentTime, videoRefProps, VideoEleP }) => {
   const videoSelf = videoo;
   const videoContainerRef = useRef(null);
   const videoRef = useRef(null);
@@ -30,6 +30,12 @@ const VideoInterface = ({ getCurrentTime }) => {
   const [currentTime, setCurrentTime] = useState('00:00');
 
   useEffect(() => {
+    videoRefProps.current = videoRef.current;
+
+    VideoEleP(VideoEle);
+  }, [videoRefProps, videoRef, VideoEle, VideoEleP]);
+
+  useEffect(() => {
     // // 滑鼠移動增加className
     const handleMouseMove = () => {
       setClassName(`${className} hover`);
@@ -38,19 +44,19 @@ const VideoInterface = ({ getCurrentTime }) => {
     const handleProgress = () => {
       const percent = (videoRef.current.currentTime / videoRef.current.duration) * 100;
       progressBarRef.current.style.flexBasis = `${percent}%`;
-    }
+    };
 
     // // 捕捉聲音渲染音量進度條
     const handleVolume = () => {
       const percent = (videoRef.current.volume / 1) * 100;
       voiceFillRef.current.style.flexBasis = `${percent}%`;
-    }
+    };
 
     // 點擊音量Bar控制音量
     const voiceScrub = (e) => {
       const scrubV = (e.offsetX / voiceBarRef.current.offsetWidth);
       videoRef.current.volume = scrubV;
-    }
+    };
 
     // 設定影片時間顯示
     const handleDurationChange = () => {
@@ -58,21 +64,19 @@ const VideoInterface = ({ getCurrentTime }) => {
       const minutes = new Date(duration * 1000).getUTCMinutes();
       const seconds = new Date(duration * 1000).getUTCSeconds();
       setVideoDurationTime(`${minutes}:${seconds}`);
-    }
+    };
     const handleCurrentTime = () => {
       const current = videoRef.current.currentTime;
       const currentMinutes = new Date(current * 1000).getUTCMinutes().toString().padStart(2, '0');
       const currentSeconds = new Date(current * 1000).getUTCSeconds().toString().padStart(2, '0');
       setCurrentTime(`${currentMinutes}:${currentSeconds} `);
       getCurrentTime(`${currentMinutes}:${currentSeconds} `); //傳到問與答做使用
-    }
+    };
     // // 點擊時間進度調控制影片進度
     const scrub = (e) => {
       const scrubTime = (e.offsetX / progressRef.current.offsetWidth) * videoRef.current.duration;
       videoRef.current.currentTime = scrubTime;
-    }
-
-
+    };
     document.addEventListener('mousemove', handleMouseMove);
     videoRef.current.addEventListener('timeupdate', handleProgress);
     videoRef.current.addEventListener('volumechange', handleVolume);
@@ -101,14 +105,14 @@ const VideoInterface = ({ getCurrentTime }) => {
     } else {
       setVideoEle(false); videoRef.current.pause();
     }
-  }
+  };
   // 影片快轉與倒轉
   const videoReverse = () => {
     videoRef.current.currentTime -= 15;
   }
   const videoForward = () => {
     videoRef.current.currentTime += 15;
-  }
+  };
   // 全螢幕切換
   const videoFullScreen = () => {
     if (fullScreenEle === false) {
@@ -118,7 +122,7 @@ const VideoInterface = ({ getCurrentTime }) => {
       setFullScreenEle(false);
       document.exitFullscreen();
     }
-  }
+  };
   // 影片播放速度按鈕點擊開合
   const switchSpeed = (e) => {
     if (speedBtn === false) {
@@ -128,12 +132,12 @@ const VideoInterface = ({ getCurrentTime }) => {
       setSpeedBtn(false);
       showSpeedListRef.current.style.display = 'none';
     }
-  }
+  };
   // 點擊切換影片速度
   const toggleVideoSpeed = (e) => {
     setSpeed(e.target.value / 100);
     videoRef.current.playbackRate = parseFloat(e.target.value) / 100;
-  }
+  };
 
 
   const stopPic = () => {
@@ -145,7 +149,7 @@ const VideoInterface = ({ getCurrentTime }) => {
       default:
         break;
     }
-  }
+  };
 
   const fullScreenPic = () => {
     switch (fullScreenEle) {
@@ -156,7 +160,7 @@ const VideoInterface = ({ getCurrentTime }) => {
       default:
         break;
     }
-  }
+  };
   return (
     <div className="video" ref={videoContainerRef}  >
       <video
@@ -184,7 +188,7 @@ const VideoInterface = ({ getCurrentTime }) => {
           </button>
         </div>
         <div className="videoTime">
-          <span>{currentTime}</span> <span>/</span> <span>{videoDurationTime}</span>
+          <span className="currentTimeSpace">{currentTime}</span> / <span>{videoDurationTime}</span>
         </div>
         <div className="videoBtnContainer voiceBtn">
           <button>
