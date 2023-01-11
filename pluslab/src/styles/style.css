@@ -1813,17 +1813,17 @@ footer .contactIconBox :last-child svg {
 .infoContainer .introContainer .introText pre {
   white-space: pre-wrap;
 }
-.infoContainer .questionAnswerContainer {
+.infoContainer .noteContainer {
   width: 74%;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBox {
+.infoContainer .noteContainer .noteBox {
   width: 76%;
   margin: 5vh 11.3%;
   display: flex;
   align-items: flex-start;
   gap: 20px;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBox .videoCurrentTime {
+.infoContainer .noteContainer .noteBox .videoCurrentTime {
   width: 10%;
   font-size: 20px;
   cursor: pointer;
@@ -1834,25 +1834,25 @@ footer .contactIconBox :last-child svg {
   padding: 5px 20px;
   font-weight: 600;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBox .textArea {
+.infoContainer .noteContainer .noteBox .textArea {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBox .textArea textarea {
+.infoContainer .noteContainer .noteBox .textArea textarea {
   min-height: 112px;
   padding: 20px;
   font-size: 20px;
   border: 6px solid #9d9faa;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBox .textArea .textAreaBtn {
+.infoContainer .noteContainer .noteBox .textArea .textAreaBtn {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: flex-end;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBox .textArea .textAreaBtn .cancelBtn {
+.infoContainer .noteContainer .noteBox .textArea .textAreaBtn .cancelBtn {
   cursor: pointer;
   font-size: 16px;
   color: white;
@@ -1862,7 +1862,7 @@ footer .contactIconBox :last-child svg {
   font-weight: bold;
   padding: 0px 16px;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBox .textArea .textAreaBtn .saveBtn {
+.infoContainer .noteContainer .noteBox .textArea .textAreaBtn .saveBtn {
   cursor: pointer;
   font-size: 16px;
   height: 34px;
@@ -1870,7 +1870,7 @@ footer .contactIconBox :last-child svg {
   border: none;
   font-weight: bold;
 }
-.infoContainer .questionAnswerContainer .questionAnswerBtn {
+.infoContainer .noteContainer .noteBtn {
   width: 76%;
   margin: 5vh 11.3%;
   display: flex;
@@ -1883,13 +1883,13 @@ footer .contactIconBox :last-child svg {
   font-size: 20px;
   padding: 0 16px;
 }
-.infoContainer .questionAnswerContainer .questionAnswerList {
+.infoContainer .noteContainer .noteList {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   gap: 30px;
 }
-.infoContainer .questionAnswerContainer .questionAnswerList .questionBox {
+.infoContainer .noteContainer .noteList .noteBox {
   margin: 5vh 11.3%;
   display: flex;
   gap: 15px;
@@ -1897,7 +1897,7 @@ footer .contactIconBox :last-child svg {
   font-size: 20px;
   color: white;
 }
-.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .videoCurrentTime {
+.infoContainer .noteContainer .noteList .noteBox .videoCurrentTime {
   width: 10%;
   font-size: 20px;
   cursor: pointer;
@@ -1908,7 +1908,7 @@ footer .contactIconBox :last-child svg {
   padding: 5px 20px;
   font-weight: 600;
 }
-.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .questionAnswerContent {
+.infoContainer .noteContainer .noteList .noteBox .noteContent {
   padding: 15px;
   width: 100%;
   background-color: #9d9faa;
@@ -1916,12 +1916,12 @@ footer .contactIconBox :last-child svg {
   flex-direction: column;
   justify-content: space-between;
 }
-.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .questionAnswerContent .questionAnswerContentDel {
+.infoContainer .noteContainer .noteList .noteBox .noteContent .noteContentDel {
   display: flex;
   align-self: flex-end;
   gap: 10px;
 }
-.infoContainer .questionAnswerContainer .questionAnswerList .questionBox .questionAnswerContent .questionAnswerContentDel button {
+.infoContainer .noteContainer .noteList .noteBox .noteContent .noteContentDel button {
   background-color: #9d9faa;
   border: none;
   cursor: pointer;

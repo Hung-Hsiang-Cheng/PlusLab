@@ -10,7 +10,7 @@ import voice from './image/voice.svg';
 // import voiceMute from './image/voiceMute.svg';
 
 
-const VideoInterface = ({ getCurrentTime, videoRefProps, VideoEleP }) => {
+const VideoInterface = ({ getCurrentTime, videoRefProps }) => {
   const videoSelf = videoo;
   const videoContainerRef = useRef(null);
   const videoRef = useRef(null);
@@ -31,11 +31,20 @@ const VideoInterface = ({ getCurrentTime, videoRefProps, VideoEleP }) => {
 
   useEffect(() => {
     videoRefProps.current = videoRef.current;
+  }, [videoRefProps, videoRef]);
 
-    VideoEleP(VideoEle);
-  }, [videoRefProps, videoRef, VideoEle, VideoEleP]);
+
 
   useEffect(() => {
+    const aaa = () => {
+      if (videoRef.current.paused == true) {
+        setVideoEle(false)
+      } else {
+        setVideoEle(true)
+      }
+    }
+    videoRef.current.addEventListener('pause', aaa);
+
     // // 滑鼠移動增加className
     const handleMouseMove = () => {
       setClassName(`${className} hover`);
@@ -150,6 +159,7 @@ const VideoInterface = ({ getCurrentTime, videoRefProps, VideoEleP }) => {
         break;
     }
   };
+
 
   const fullScreenPic = () => {
     switch (fullScreenEle) {
