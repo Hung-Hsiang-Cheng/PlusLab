@@ -6,6 +6,7 @@ import OrderMod from "../components/CartPage/OrderMod";
 import Mark from "../components/CartPage/Mark";
 import cart from "../components/CartPage/img/cart.svg";
 import collectCourse from "../components/CartPage/img/collectCourse.svg";
+
 const Cartpage = (props) => {
   let title = [
     {
@@ -41,8 +42,6 @@ const Cartpage = (props) => {
         );
       })}
       <Top />
-
-      
     </Fragment>
   );
 };

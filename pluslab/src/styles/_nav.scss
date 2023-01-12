@@ -82,7 +82,7 @@ nav {
   :last-child img {
     margin-top: 5px;
   }
-  .profilePic {
+  .profilePic,.cartList {
     cursor: pointer;
     .dropDown {
       display: none;
@@ -170,4 +170,23 @@ a{
  background-color: $redDarker;
 
 }
+// .shoppingCart:hover ~.dropDown,
+// .shoppingCart:hover ~.mouth {
+//     display: block;
+//   }
+// .cartList{
+//   position: relative;
+//   .dropDown{
+//     position:absolute;
+//     right:-5vw;
+//     top:4vw
+//   }
+//   .mouth{
+//     width: 16px;
+//       height: 16px;
+//     position:absolute;
+//     right: -0.3vw;
+//     top:2vw
+//   }
+// }
 }

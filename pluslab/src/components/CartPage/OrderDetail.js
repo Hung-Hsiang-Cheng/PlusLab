@@ -1,7 +1,10 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment,useContext,useReducer } from "react";
 import { Link } from "react-router-dom";
 import Checkout from "./Checkout";
+
 const OrderDetail = () => {
+
+
   const State = {
     cart: [
       {
@@ -90,6 +93,7 @@ const OrderDetail = () => {
       },
     ],
   };
+
   return (
     <Fragment>
       <ul className="dCartList">

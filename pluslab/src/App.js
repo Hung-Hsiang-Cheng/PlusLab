@@ -11,19 +11,22 @@ import VideoPage from "./pages/VideoPage";
 import { Routes, Route } from "react-router-dom";
 import "./styles/style.css";
 
+
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/Coursepage" element={<Coursepage />} />
-        <Route path="/OrderHistory" element={<OrderHistory />} />
-        <Route path="/Coursepage/Cartpage" element={<Cartpage />} />
-        <Route path="/video" element={<VideoPage />} />
-      </Routes>
-      <Footer />
+     
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/dashboard" element={<DashBoard />} />
+          <Route path="/Coursepage" element={<Coursepage />} />
+          <Route path="/OrderHistory" element={<OrderHistory />} />
+          <Route path="/Cartpage" element={<Cartpage />} />
+          <Route path="/video" element={<VideoPage />} />
+        </Routes>
+        <Footer />
+     
     </div>
   );
 }

@@ -138,6 +138,7 @@ body {
     position: absolute;
     top: 0px;
     width: 198%;
+    
     left: 0;
     height: 100%;
     z-index: 2;
@@ -145,7 +146,7 @@ body {
     transition: 0.5s;
     img {
       width: 100%;
-      height: 100%;
+      height: 300px;
       object-fit: cover;
     }
   }
@@ -513,6 +514,14 @@ ul li Link button {
   margin: 10px;
 
   background: $primary;
+  label{
+    position: relative;
+    margin: 0 auto;
+    color: $white;
+    margin: 2px;
+ 
+
+  }
   .ulAllCourseContainer {
     display: flex;
     flex-wrap: wrap;
@@ -524,6 +533,7 @@ ul li Link button {
     height: calc(400 * 3);
     margin: 0 auto;
     list-style-type: none;
+    
   }
 }
 .dCard {
@@ -578,8 +588,9 @@ ul li Link button {
     letter-spacing: 0.1em;
   }
   .imgCard {
-    object-fit: contain;
+    object-fit: cover;
     position: relative;
+    height: 170px;
   }
   .shopCart {
     position: absolute;
@@ -591,6 +602,13 @@ ul li Link button {
     font-size: 25px;
     z-index: 8;
     color: $red;
+    &:hover{
+      svg{
+        path{
+          fill:$blueLighter
+        }
+      }
+    }
   }
   .dCardMark {
     position: absolute;
