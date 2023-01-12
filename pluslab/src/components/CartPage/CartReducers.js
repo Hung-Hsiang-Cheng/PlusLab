@@ -7,6 +7,25 @@ export const cartReducer = (state, action) => {
         ...state,
         cart: state.cart.filter((c) => c.value.id !== action.payload.value.id),
       };
+    case "REMOVE_CART":
+      if(state.cart.length>0){
+        const valueid = () => {
+          for (let j = 0; j < state.cart.length; j++) {
+            for (let i = 0; i < action.payload.value.length; i++) {
+              if (state.cart[j].value.id === action.payload.value[i].value.id) {
+                return state.cart.filter(
+                  (c) => c.value.id !== action.payload.value[i].value.id
+                );
+              }
+            }
+          }
+        };
+     
+      return {
+        ...state,
+        cart: valueid,
+      };
+      };
     case "CHANGE_CART_QTY":
       return {
         ...state,
@@ -18,4 +37,3 @@ export const cartReducer = (state, action) => {
       return state;
   }
 };
-

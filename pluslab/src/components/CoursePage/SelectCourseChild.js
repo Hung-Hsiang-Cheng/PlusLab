@@ -29,7 +29,6 @@ const [Saturate, setSaturate] = useState(false);
 
   return (
     <Link to="/">
-      {console.log(cart)}
       <li
         className="dCard"
         id={props.value.id}
@@ -40,8 +39,8 @@ const [Saturate, setSaturate] = useState(false);
       >
         <img className="imgCard" src={props.value.img} />
 
-        {console.log(cart.some((p) => p.value.id === props.value.id))}
         <div className="shopCart">
+          
           {cart.some((p) => p.value.id === props.value.id) ? (
             <svg
               width="28"

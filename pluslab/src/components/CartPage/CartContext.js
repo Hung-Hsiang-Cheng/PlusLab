@@ -93,7 +93,6 @@ const Context = ({ children }) => {
 
   const [state, dispatch] = useReducer(cartReducer, {
     Courselist: Courselist,
-    
     cart: [],
   });
 
