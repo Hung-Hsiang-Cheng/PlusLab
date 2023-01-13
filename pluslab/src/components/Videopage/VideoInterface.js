@@ -33,41 +33,89 @@ const VideoInterface = ({ getCurrentTime, videoRefProps }) => {
     videoRefProps.current = videoRef.current;
   }, [videoRefProps, videoRef]);
 
-
-
+  // // 影片暫停改圖標
   useEffect(() => {
-    const aaa = () => {
+    const handlePause = () => {
+      if (!videoRef.current) return;
       if (videoRef.current.paused == true) {
         setVideoEle(false)
       } else {
         setVideoEle(true)
       }
     }
-    videoRef.current.addEventListener('pause', aaa);
+    videoRef.current.addEventListener('pause', handlePause);
+    return () => {
+      if (videoRef.current) videoRef.current.removeEventListener('pause', handlePause);
+    }
+  }, [videoRef])
 
-    // // 滑鼠移動增加className
+  // // 滑鼠移動增加className
+  useEffect(() => {
     const handleMouseMove = () => {
       setClassName(`${className} hover`);
     };
-    // // 捕捉影片時間渲染時間進度條
+    document.addEventListener('mousemove', handleMouseMove);
+  }, [])
+
+  // // 大於三秒沒有偵測到移動滑鼠時取消hover效果
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setClassName(className.replace(' hover', ''));
+    }, 5000);
+    // 在組件卸載時清除timeout
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [className]);
+
+  // // 捕捉影片時間渲染時間進度條
+  useEffect(() => {
     const handleProgress = () => {
+      if (!videoRef.current) return;
       const percent = (videoRef.current.currentTime / videoRef.current.duration) * 100;
       progressBarRef.current.style.flexBasis = `${percent}%`;
     };
+    videoRef.current.addEventListener('timeupdate', handleProgress);
+    return () => {
+      if (videoRef.current) videoRef.current.removeEventListener('timeupdate', handleProgress);
+    }
+  }, [])
 
-    // // 捕捉聲音渲染音量進度條
+  // // 捕捉聲音渲染音量進度條
+  useEffect(() => {
     const handleVolume = () => {
       const percent = (videoRef.current.volume / 1) * 100;
       voiceFillRef.current.style.flexBasis = `${percent}%`;
     };
+    videoRef.current.addEventListener('volumechange', handleVolume);
+    return () => {
+      if (videoRef.current) videoRef.current.removeEventListener('volumechange', handleVolume);
+    }
+  }, [])
 
-    // 點擊音量Bar控制音量
+  // // 點擊音量Bar控制音量
+  useEffect(() => {
     const voiceScrub = (e) => {
       const scrubV = (e.offsetX / voiceBarRef.current.offsetWidth);
       videoRef.current.volume = scrubV;
     };
+    voiceBarRef.current.addEventListener('click', voiceScrub);
+    return () => {
+      if (videoRef.current) videoRef.current.removeEventListener('click', voiceScrub);
+    }
+  }, [])
 
-    // 設定影片時間顯示
+  // // 點擊時間進度調控制影片進度
+  useEffect(() => {
+    const scrub = (e) => {
+      const scrubTime = (e.offsetX / progressRef.current.offsetWidth) * videoRef.current.duration;
+      videoRef.current.currentTime = scrubTime;
+    };
+    progressRef.current.addEventListener('click', scrub);
+  }, [])
+
+  // // 設定影片時間顯示
+  useEffect(() => {
     const handleDurationChange = () => {
       const duration = videoRef.current.duration;
       const minutes = new Date(duration * 1000).getUTCMinutes();
@@ -75,37 +123,25 @@ const VideoInterface = ({ getCurrentTime, videoRefProps }) => {
       setVideoDurationTime(`${minutes}:${seconds}`);
     };
     const handleCurrentTime = () => {
+      if (!videoRef.current) return;
       const current = videoRef.current.currentTime;
       const currentMinutes = new Date(current * 1000).getUTCMinutes().toString().padStart(2, '0');
       const currentSeconds = new Date(current * 1000).getUTCSeconds().toString().padStart(2, '0');
       setCurrentTime(`${currentMinutes}:${currentSeconds} `);
       getCurrentTime(`${currentMinutes}:${currentSeconds} `); //傳到問與答做使用
     };
-    // // 點擊時間進度調控制影片進度
-    const scrub = (e) => {
-      const scrubTime = (e.offsetX / progressRef.current.offsetWidth) * videoRef.current.duration;
-      videoRef.current.currentTime = scrubTime;
-    };
-    document.addEventListener('mousemove', handleMouseMove);
-    videoRef.current.addEventListener('timeupdate', handleProgress);
-    videoRef.current.addEventListener('volumechange', handleVolume);
-    voiceBarRef.current.addEventListener('click', voiceScrub);
     videoRef.current.addEventListener('loadedmetadata', handleDurationChange);
     videoRef.current.addEventListener('timeupdate', handleCurrentTime);
-    progressRef.current.addEventListener('click', scrub);
-  }, []);
-
-  // // 大於三秒沒有偵測到移動滑鼠時取消hover效果
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setClassName(className.replace(' hover', ''));
-    }, 5000);
-
-    // 在組件卸載時清除timeout
     return () => {
-      clearTimeout(timeout);
-    };
-  }, [className]);
+      if (videoRef.current) {
+        videoRef.current.removeEventListener('loadedmetadata', handleDurationChange);
+        videoRef.current.removeEventListener('timeupdate', handleCurrentTime);
+      }
+
+    }
+  }, [videoRef]);
+
+
 
   // 影片暫停與播放 
   const playToggle = () => {

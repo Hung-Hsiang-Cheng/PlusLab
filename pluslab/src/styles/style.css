@@ -1562,6 +1562,7 @@ footer .contactIconBox :last-child svg {
   position: absolute;
   bottom: 0;
   width: 100%;
+  transform: translateY(100%) translateY(-5px);
   transition: all 0.3s;
   flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.1);
