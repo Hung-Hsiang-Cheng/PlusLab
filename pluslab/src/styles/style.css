@@ -796,7 +796,7 @@ ul li Link button:hover {
   display: flex;
   float: right;
   font-size: 25px;
-  z-index: 8;
+  z-index: 2;
   color: #e23965;
 }
 .dCard .shopCart:hover svg path {
@@ -809,7 +809,7 @@ ul li Link button:hover {
   font-size: 25px;
   padding: 5px;
   color: #e23965;
-  z-index: 300;
+  z-index: 2;
 }
 .dCard .dCardTeacher {
   color: #1d1f27;

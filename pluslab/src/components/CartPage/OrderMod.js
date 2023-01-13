@@ -5,7 +5,7 @@ import { CartState } from "./CartContext";
 import Checkout from "./Checkout";
 import noneBox from "./img/Box.png";
 
-const OrderMod = (props) => {
+const OrderMod = () => {
   const {
     state: { cart },
   } = CartState();
@@ -61,7 +61,9 @@ const State = {
             <img src={noneBox} alt="noneBox" />
           </div>
           <div className="btnCartNone">
-            <button>立即探索課程</button>
+            <Link to="/Coursepage">
+              <button>立即探索課程</button>
+            </Link>
           </div>
         </Fragment>
       )}

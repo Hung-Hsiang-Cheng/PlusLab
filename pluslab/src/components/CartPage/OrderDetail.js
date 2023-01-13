@@ -4,7 +4,6 @@ import { CartState } from "./CartContext";
 import Checkout from "./Checkout";
 
 const OrderDetail = () => {
-
   const {
     state: { cart },dispatch
   } = CartState();
@@ -39,6 +38,7 @@ const OrderDetail = () => {
                           type: "REMOVE_CART",
                           payload: cart,
                         });e.preventDefault();
+                        console.log(cart);
                       }}
                     >
                       <path

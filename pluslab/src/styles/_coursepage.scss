@@ -600,7 +600,7 @@ ul li Link button {
     display: flex;
     float: right;
     font-size: 25px;
-    z-index: 8;
+    z-index: 2;
     color: $red;
     &:hover{
       svg{
@@ -617,7 +617,7 @@ ul li Link button {
     font-size: 25px;
     padding: 5px;
     color: $red;
-    z-index: 300;
+    z-index: 2;
   }
   .dCardTeacher {
     color: $primary;
