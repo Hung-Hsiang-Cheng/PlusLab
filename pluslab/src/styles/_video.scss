@@ -152,7 +152,7 @@
       align-items: stretch;
       flex-direction: column;
       background-color: $primaryLightest;
-      color: $primaryLightestest;
+      color: $white;
       width: 21.8%;
       font-size: 22px;
       overflow-x: hidden;
@@ -444,7 +444,52 @@
         }
       }
     }
-
+    .commentContainer{
+      width: 74%;
+      .commentRating{
+        width: 76%;
+        margin: 5vh 11.3%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .ratingStar{
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .commentEnterBox{
+        width: 76%;
+        margin: 5vh 11.3%;
+        display: flex;
+        align-items: flex-start;
+        .textArea{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          textarea{
+            min-height: 112px;
+            padding: 20px;
+            font-size: 20px;
+            border:6px solid $primaryLightestest;
+          }
+          .textAreaBtn{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+            .saveBtn{
+              cursor: pointer;
+              font-size: 16px;
+              height: 34px;
+              padding: 0px 16px;
+              border: none;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
   }
 
 
