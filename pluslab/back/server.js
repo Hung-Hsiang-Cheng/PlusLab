@@ -22,5 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', require('./routes/video.js'));
+app.use('/', require('./routes/videocomment.js'));
 
 app.listen(8800);

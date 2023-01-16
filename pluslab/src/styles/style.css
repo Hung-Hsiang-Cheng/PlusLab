@@ -1941,37 +1941,69 @@ footer .contactIconBox :last-child svg {
   width: 60px;
   height: 60px;
 }
-.infoContainer .commentContainer .commentEnterBox {
+.infoContainer .commentContainer .commentKeyInBox {
   width: 76%;
   margin: 5vh 11.3%;
   display: flex;
   align-items: flex-start;
 }
-.infoContainer .commentContainer .commentEnterBox .textArea {
+.infoContainer .commentContainer .commentKeyInBox .textArea {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.infoContainer .commentContainer .commentEnterBox .textArea textarea {
+.infoContainer .commentContainer .commentKeyInBox .textArea textarea {
   min-height: 112px;
   padding: 20px;
   font-size: 20px;
   border: 6px solid #9d9faa;
 }
-.infoContainer .commentContainer .commentEnterBox .textArea .textAreaBtn {
+.infoContainer .commentContainer .commentKeyInBox .textArea .textAreaBtn {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: flex-end;
 }
-.infoContainer .commentContainer .commentEnterBox .textArea .textAreaBtn .saveBtn {
+.infoContainer .commentContainer .commentKeyInBox .textArea .textAreaBtn .saveBtn {
   cursor: pointer;
   font-size: 16px;
   height: 34px;
   padding: 0px 16px;
   border: none;
   font-weight: bold;
+}
+.infoContainer .commentContainer .commentList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.infoContainer .commentContainer .commentList .commentBox {
+  margin: 5vh 11.3%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  font-size: 20px;
+  color: white;
+}
+.infoContainer .commentContainer .commentList .commentBox .commentContent {
+  padding: 15px;
+  width: 100%;
+  background-color: #9d9faa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infoContainer .commentContainer .commentList .commentBox .commentContent .commentContentDel {
+  display: flex;
+  align-self: flex-end;
+  gap: 10px;
+}
+.infoContainer .commentContainer .commentList .commentBox .commentContent .commentContentDel button {
+  background-color: #9d9faa;
+  border: none;
+  cursor: pointer;
 }
 
 .navLogOut #active {

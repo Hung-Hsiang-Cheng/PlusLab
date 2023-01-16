@@ -2,9 +2,6 @@ const express = require('express')
 const Video = require('../schema/videonoteschema.js');
 const router = express.Router()
 
-// router.get('/', (req, res) => {
-//   res.send('123')
-// });
 
 
 router.post('/', (req, res) => {
@@ -32,6 +29,18 @@ router.get('/', (req, res) => {
     }
   });
 });
+
+router.delete('/:id', (req, res) => {
+  Video.findByIdAndDelete(req.params.id)
+    .then(() => {
+      res.send('刪除成功');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+
 
 
 module.exports = router;
